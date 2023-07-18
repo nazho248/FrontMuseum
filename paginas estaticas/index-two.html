@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Inicio</title>
+    <!--favicon-->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/index-two.css">
 
-    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-              integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-                crossorigin="anonymous"></script>-->
-    <link rel="stylesheet" href="assets/css/index.css">
-
-    <title>Inicio</title>
 </head>
-
 <body>
 
 <!--background image -->
 <div class="bg-image"></div>
+<div class="bg-image-border"></div>
 
-<!--Contenido de la página para que no se vea opacado por el filtro-->
+
+
 <div class="content">
-
-    <!--logo flotante en la parte superior izquierda-->
-    <div class="logo">
-        <img src="assets/img/logo_udes_texto.png" alt="logo">
-    </div>
-
-
     <!--botón flotante de menu en la parte superior derecha-->
     <div class="menu">
         <div id="nav-icon">
@@ -42,39 +29,43 @@
         </div>
     </div>
 
-
-    <!--align div to the center of the screen-->
-    <div class="flex items-center justify-center" style="height: 100%;">
-        <h1 class="p-2 m-2  text-white">Bienvenido al museo Prehispánico UDES</h1>
+    <!--align div to the center of the screen tailwindcss-->
+    <div class="flex items-center justify-center h-1" style="height: 70%;">
+        <!--make a squeare tailwindcss-->
+        <div class=" border-solid border-4 border-yellow-200 rounded-lg p-10">
+            <h1 class="text-yellow-200 text-center text-6xl mb-2">Releyendo Artefactos</h1>
+            <p class="text-orange-200 text-center text-3xl mb-2">Museo arqueológico, etnológico e histórico</p>
+            <p class="text-orange-200 text-end text-3xl">UDES</p>
+        </div>
     </div>
-
 
     <!--4 cols on the bottom of the page-->
     <div class="row bottom-navigation">
-        <div class="col">
+        <div class="col border-t-4 border-yellow-200">
             <img src="assets/img/f48caa45bca59ea8f5e9d6625b6f7cc3.jpg" class="overlay">
             <!--un elemento div para que le texto esté mas por encima de la imagen y no le afecte el blur-->
             <div>
-                <h2>Arte</h2>
+                <h2 class="text-orange-200 text-start indent-8">Estética</h2>
             </div>
         </div>
-        <div class="col">
+        <!--border only on top yellow-200-->
+        <div class="col border-t-4 border-yellow-200">
             <a href="cultura.html">
                 <img src="assets/img/cultura.jpg" class="overlay">
-                <div><h2>Cultura</h2></div>
+                <div><h2 class="text-orange-200">Tiempo</h2></div>
             </a>
 
         </div>
-        <div class="col">
+        <div class="col border-t-4 border-yellow-200">
             <img src="assets/img/arqueologia.jpg" class="overlay">
-            <div><h2>Arqueología</h2></div>
+            <div><h2 class="text-orange-200">Arte-Facto</h2></div>
         </div>
-        <div class="col">
+        <div class="col border-t-4 border-yellow-200">
             <a href="social.html">
                 <img src="assets/img/social.jpg" class="overlay">
-                <div><h2>Social</h2></div>
-            </a>
-        </div>
+                <div><h2 class="text-orange-200 text-end pr-10">Galería                                                                   </h2></div>
+                                                      <a     style                                               =""      </a>    
+           </div>
     </div>
 
 </div>
@@ -85,36 +76,34 @@
 
         <div class="grid grid-cols-3 m-4">
             <div class="icon accesibility">
-                <h2>👁️</h2>
+                <h2 class="text-3xl">👁️</h2>
             </div>
             <div class="card-title text-center">
-                <h1>Sobre la Exposición</h1>
+                <h1 class="text-3xl">Sobre la Exposición</h1>
             </div>
             <div class="col-1 text-end ">
                 <div class="icon close">
-                    <h2><strong>X</strong></h2>
+                    <h2 class="text-3xl"><strong>X</strong></h2>
                 </div>
             </div>
 
         </div>
 
         <br>
-        <p class="card-text m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus at dolor aliquam
+        <p class="card-text text-xl mx-10 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus at dolor aliquam
             pulvinar a odio orci velit. Justo sollicitudin magna ac lacinia. Non enim dignissim orci in massa, accumsan,
             consectetur cursus. Massa nunc nunc pellentesque est faucibus faucibus. Commodo, aliquam tempus, feugiat
             tristique tellus. Nunc aenean nec interdum tempor. Tempus, nulla fringilla volutpat at ut dolor massa
             fermentum leo.
             Arcu viverra dictum at phasellus cursus adipiscing at ipsum sed. Pharetra proin ut vel scelerisque. Quis
-            dolor sit elementum risus sit tortor. Lorem nec, vulputate quam urna. Ut urna et sit sed. Aenean sit
-            pellentesque placerat ut pulvinar aliquet pulvinar turpis morbi. A diam et nullam velit. Cursus diam, vel
-            ultricies sapien fusce et. Adipiscing magnis aliquet et elit molestie phasellus netus.</p>
+            dolor sit elementum risus sit tortor.</p>
         <br>
         <hr>
         <!--footer of the card-->
-        <div class="card-footer text-center">
+        <div class="card-footer text-center p-5">
             <!--icon of a world-->
             <a href="login.html">
-                <h3 class="text-info text-start icon">🌎 Intranet</h3>
+                <h3 class="text-info text-start icon text-2xl">🌎 Intranet</h3>
             </a>
         </div>
 

@@ -13,6 +13,7 @@ a{
     color: #FFFFFF;
 }
 
+
 .bg-image {
     background: url(../img/canonautor.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -26,7 +27,31 @@ a{
     position: fixed;
     right: 0;
     z-index: 1;
+
+    border-top-width: 130px;
+    border-left-width: 155px;
+    border-right-width: 150px;
+    border-bottom-width: 110px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.65);
 }
+
+.bg-image-border {
+    background: url(../img/border-smooth.png) no-repeat;
+    background-size: 100% 100%;
+    transform: scale(1.05);
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 5;
+/*smooth png */
+    image-rendering: smooth;
+
+}
+
 
 /*Contenido par que no se vea oscurecido por el filtro*/
 .content {
@@ -36,7 +61,7 @@ a{
     left: 0;
     right: 0;
     height: 100%;
-    z-index: 2;
+    z-index: 2999;
 }
 
 
@@ -69,8 +94,9 @@ a{
     display: block;
     position: fixed;
     right: 0;
-    margin-right: 75px;
-    margin-top: 5px;
+    margin-right: 200px;
+    margin-top: 100px;
+    z-index: 999;
 }
 
 
@@ -82,9 +108,9 @@ a{
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 122px;
+    left: 224px;
+    right: 224px;
     height: 80px;
     color: white;
     font-size: 30px;
@@ -93,11 +119,11 @@ a{
 }
 
 .bottom-navigation .col {
-    border-width: 1px;
-    border-style: solid;
-    padding: 0;
-    border-color: rgba(255, 255, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0.4);
+    /*     border-width: 1px;
+        border-style: solid;
+        padding: 0;
+       border-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(0, 0, 0, 0.4);*/
     backdrop-filter: blur(2px) saturate(100%);
     transition: 0.5s;
     flex-grow: 1;
@@ -130,14 +156,16 @@ a{
     height: 100vh;
     transition: .5s ease;
     object-fit: cover;
-
+    /*hide image*/
+    opacity: 0;
 }
 
 .bottom-navigation .col:hover .overlay {
     /*height of all the screen*/
     position: fixed;
-    height: 101vh;
+    height: calc(101vh - 122px);
     bottom: 0;
+    opacity: 1;
 }
 
 
@@ -158,9 +186,10 @@ a{
 
 /*card aligned to the center*/
 .card.active {
-    top: 25%;
+    top: 30%;
     background-color: white !important;
     color: black !important;
+    z-index: 9999 !important;
 }
 
 .card.active .card-footer, .card.active hr{
@@ -190,37 +219,6 @@ a{
     display: none;
 }
 
-
-
-/*.bg-image {
-    background: url("../img/wall_canyon.jpg") no-repeat center center fixed;
-    background-size: cover;
-    display: block;
-    width: 100%;
-    height: 100%;
-    !*brightness 50%*!
-    filter: brightness(50%);
-    -webkit-filter: brightness(50%);
-    left: 0;
-    position: fixed;
-    right: 0;
-    z-index: -1;
-}*/
-
-/*
-.menu {
-    background-size: cover;
-    display: block;
-    position: fixed;
-    right: 0;
-    margin-right: 75px;
-    margin-top: 5px;
-    z-index: 2;
-}*/
-
-
-
-
 /*Hamburguer menu*/
 #nav-icon {
     width: 60px;
@@ -239,7 +237,7 @@ a{
 }
 
 #nav-icon:hover span {
-    background: red;
+    background: #ff9e3b;
     transition: 0.25s;
 }
 
@@ -248,7 +246,7 @@ a{
     position: absolute;
     height: 7px;
     width: 100%;
-    background: #ffffff;
+    background: #fcee89;
     border-radius: 9px;
     opacity: 1;
     left: 0;
