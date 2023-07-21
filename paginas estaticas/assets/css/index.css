@@ -6,6 +6,10 @@
 body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("../img/canonautor.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 a{
@@ -13,54 +17,33 @@ a{
     color: #FFFFFF;
 }
 
-.bg-image {
-    background: url(../img/canonautor.jpg) no-repeat center center fixed;
+.frame {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /*always showing the border*/
+    background: url("../img/border-smooth.png") no-repeat center center fixed;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.contenty {
+    position: relative;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    height: 87%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: url("../img/canonautor.jpg") no-repeat top fixed;
     background-size: cover;
-    display: block;
-    width: 100%;
-    height: 100%;
-    /*brightness 50%*/
-    filter: brightness(50%);
-    -webkit-filter: brightness(50%);
-    left: 0;
-    position: fixed;
-    right: 0;
-    z-index: 1;
-}
-
-/*Contenido par que no se vea oscurecido por el filtro*/
-.content {
-    /*    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);*/
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 100%;
-    z-index: 2;
-}
-
-
-/*logo flotante en la parte superior izquierda*/
-.logo {
-    background-size: cover;
-    display: block;
-    width: 175px;
-    height: 60px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    margin-left: 75px;
-    margin-top: 50px;
-    z-index: 20;
-
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(0) invert(1);
-    z-index: 20;
-
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-clip: content-box;
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
+    mask-image: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
 }
 
 /*    <!--botón flotante de menu en la parte superior derecha-->*/
@@ -69,8 +52,8 @@ a{
     display: block;
     position: fixed;
     right: 0;
-    margin-right: 75px;
-    margin-top: 5px;
+    margin-right: 40px;
+    z-index: 999;
 }
 
 
@@ -82,10 +65,9 @@ a{
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
+    bottom: 30px;
+    left: 50px;
+    right: 50px;
     color: white;
     font-size: 30px;
     text-align: center;
@@ -93,12 +75,8 @@ a{
 }
 
 .bottom-navigation .col {
-    border-width: 1px;
-    border-style: solid;
-    padding: 0;
-    border-color: rgba(255, 255, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px) saturate(100%);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: 0.5s;
     flex-grow: 1;
 }
@@ -108,9 +86,7 @@ a{
     transition: 0.5s;
 }
 
-
 .bottom-navigation .col:hover div {
-    /*this div is the equal size  that .col*/
     padding: 20px;
     width: 100%;
     height: 100%;
@@ -130,15 +106,15 @@ a{
     height: 100vh;
     transition: .5s ease;
     object-fit: cover;
-
+    opacity: 0;
 }
 
 .bottom-navigation .col:hover .overlay {
-    /*height of all the screen*/
-    position: fixed;
-    height: 101vh;
+    height: calc(83vh - 10%); /* Ajustar según sea necesario */
     bottom: 0;
+    opacity: 1;
 }
+
 
 
 /*MENU DESPLEGABLE  */
@@ -158,9 +134,10 @@ a{
 
 /*card aligned to the center*/
 .card.active {
-    top: 25%;
+    top: 30%;
     background-color: white !important;
     color: black !important;
+    z-index: 9999 !important;
 }
 
 .card.active .card-footer, .card.active hr{
@@ -190,37 +167,6 @@ a{
     display: none;
 }
 
-
-
-/*.bg-image {
-    background: url("../img/wall_canyon.jpg") no-repeat center center fixed;
-    background-size: cover;
-    display: block;
-    width: 100%;
-    height: 100%;
-    !*brightness 50%*!
-    filter: brightness(50%);
-    -webkit-filter: brightness(50%);
-    left: 0;
-    position: fixed;
-    right: 0;
-    z-index: -1;
-}*/
-
-/*
-.menu {
-    background-size: cover;
-    display: block;
-    position: fixed;
-    right: 0;
-    margin-right: 75px;
-    margin-top: 5px;
-    z-index: 2;
-}*/
-
-
-
-
 /*Hamburguer menu*/
 #nav-icon {
     width: 60px;
@@ -239,7 +185,7 @@ a{
 }
 
 #nav-icon:hover span {
-    background: red;
+    background: #ff9e3b;
     transition: 0.25s;
 }
 
@@ -248,7 +194,7 @@ a{
     position: absolute;
     height: 7px;
     width: 100%;
-    background: #ffffff;
+    background: #fcee89;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -308,3 +254,4 @@ a{
     top: 39px;
     left: 8px;
 }
+/*fin hamburger menu*/
