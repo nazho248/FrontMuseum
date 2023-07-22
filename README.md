@@ -78,5 +78,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Estoy usando librerias y repositorios como:
 
 <ul>
-<li>aOw</li>
+<li><a href="https://jsfiddle.net/lachlan/r8qWV/"> Generador Codigos QR</li>
 </ul>
