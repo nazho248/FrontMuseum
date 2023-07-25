@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/boton_atras.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /*personalizar barra de scroll de thumbnails-container*/
+        #customScroll::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #customScroll::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #5f5f5f;
+
+        }
+
+        #customScroll::-webkit-scrollbar-thumb {
+            background-color: #ffd741;
+            outline: 1px solid slategrey;
+        }
+
+        /*personalizar barra de scroll de thumbnails-container*/
+    </style>
+
+</head>
+<body class="h-screen max-h-screen">
+
+<!--Botón-->
+<a class="back-button px-5 none-link bg-real-800" href="index.html">
+    <button class="back-button" type="button">
+        <span class="arrow"></span>
+    </button>
+</a>
+<!--Botón-->
+
+<div class="flex min-h-screen h-screen">
+    <div class="flex flex-col w-5/12 bg-orange-200 align-middle p-2 justify-center items-center">
+        <h1 class="text-4xl text-center mb-5 text-orange-800 font-bold">UDES C123</h1>
+        <model-viewer class="w-full h-3/4 bg-white rounded-lg" id="reveal" loading="eager"
+                      src="http://localhost/C432.glb" camera-controls touch-action="pan-y" shadow-intensity="2"
+                      auto-rotate></model-viewer>
+    </div>
+
+
+    <div class="flex flex-col w-8/12 p-10">
+        <p class="mt-10 text-xl text-justify"
+        >Copa con borde invertido y labio recto, sobre el hombro salen dos agarraderas, cuerpo elipsoide. Tiene
+            decoración pintada externa e interna, y su acabado es pulido. La vasija presenta una irregularidad en el
+            soporte que le genera un desnivel marca- do a la pieza.</p>
+
+        <div class="flex flex-row gap-5 mt-10 justify-center">
+            <img class="w-1/3 h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="">
+            <img class="w-1/3 h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" alt="">
+            <img class="w-1/3 h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" alt="">
+        </div>
+
+        <div class="flex flex-row gap-5 mt-10 h-full justify-center items-center">
+            <!--object fit from the left-->
+            <img class="w-4/6 h-full rounded-md" src="assets/img/0V3A0678.jpg" alt="" style="object-fit: cover;  object-position: left center;
+
+            <p class="text-xl text-justify w-2/6">La decoración pintada externa e interna, y su acabado es pulido. La
+                vasija presenta una irregularidad en el soporte que le genera un desnivel marca- do a la pieza.</p>
+        </div>
+
+    </div>
+
+    <div id="customScroll" class="flex flex-col w-1/12 bg-orange-300 gap-1 overflow-x-hidden overflox-y-scroll">
+        <!--menu-->
+        <div class="flex h-20 w-full bg-orange-200 justify-center items-center hover:bg-orange-400 cursor-pointer transition duration-500 ease-in-out">
+            <i class='bx bx-menu bx-lg text-orange-800'></i>
+        </div>
+
+        <!--otros elementos-->
+        <img class="w-fit h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -12px  center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -5px center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -10px center;">
+
+        <!--duplicados ps-->
+        <img class="w-fit h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -12px  center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -5px center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -10px center;">
+        <img class="w-fit h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -12px  center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -5px center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -10px center;">
+        <img class="w-fit h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -12px  center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -5px center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -10px center;">
+        <img class="w-fit h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -12px  center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -5px center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -10px center;">
+        <img class="w-fit h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0666.jpg" alt="" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -12px  center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0678.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -5px center;">
+        <img class="w-full h-fit rounded-md drop-shadow-xl" src="assets/img/0V3A0671.jpg" style="aspect-ratio: 1/1; object-fit: cover;  object-position: -10px center;">
+    </div>
+
+</div>
+
+
+<!-- Aquí puedes agregar un contenedor para el lienzo de Three.js -->
+
+
+<script type="module"
+        src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.2.0/dist/model-viewer.min.js"></script>
+
+</div>
+
+
+</body>
+</html>

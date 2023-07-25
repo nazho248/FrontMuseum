@@ -1,0 +1,150 @@
+
+.gallery {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-image {
+    position: relative;
+    height: 100vh;
+    width: 90%;
+    transition: 0.5s ease-in-out
+}
+
+.main-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.info-floating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(162, 86, 86, 0.8);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.info-floating i {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.thumbnails {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    transform: translateY(0);
+}
+
+.thumbnails-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    height: 100%;
+    gap: 10px;
+    padding-left: 5px;
+}
+
+/*personalizar barra de scroll de thumbnails-container*/
+.thumbnails-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.thumbnails-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnails-container::-webkit-scrollbar-thumb {
+    background-color: #659dff;
+    outline: 1px solid slategrey;
+}
+
+/*personalizar barra de scroll de thumbnails-container*/
+
+.thumbnails img {
+    cursor: pointer;
+}
+
+.expand-images-btn {
+    position: absolute;
+    top: 45%;
+    width: 40px;
+    right: 0;
+    height: 60px;
+    border-radius: 50px 0 0 50px;
+    background-color: #003195;
+    display: flex;
+    margin-right: 10%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: margin-right 0.5s ease-in-out;
+}
+
+.expand-images-btn i {
+    color: #fff;
+    transition: 0.5s ease-in-out
+}
+
+/*        <!--texto ubicado en la parte inferior central de forma absoluta con tailwind-->*/
+.image-text {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    width: 80%;
+    transition: 0.5s ease-in-out;
+}
+
+.image-text.hidden-text{
+    /*ocultar texto sin recurrir a display none ni a visibility hidden*/
+    opacity: 0;
+}
+
+/*si body contiene .hide-thumbnails, thumbnails se oculta*/
+.hide-thumbnails .thumbnails {
+    width: 0;
+}
+
+.hide-thumbnails .expand-images-btn {
+    margin-right: 0;
+}
+
+.hide-thumbnails .expand-images-btn i {
+    transform: rotate(180deg);
+}
+
+.hide-thumbnails .main-image {
+    width: 100%;
+}
+
+.hide-thumbnails .thumbnails .thumbnails-container {
+    transition: 0.5s ease-in-out;
+    transform: translateX(100%);
+}
