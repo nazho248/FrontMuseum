@@ -54,7 +54,7 @@ body{
 
 
 .bg-image{
-    background: url(./src/wall_canyon.jpg) no-repeat center center fixed;
+    background: url(../img/wall_canyon.jpg) no-repeat center center fixed;
     background-size: cover;
     display: block;
     width: 100%;
