@@ -1,22 +1,19 @@
 // App.js
-import React, {Fragment} from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {HomePage} from './HomePage';
-import {Estetica} from './Estetica';
+import React from 'react';
+import { BrowserRouter as Router} from 'react-router-dom';
+
+import './styles/App.css';
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 //import fragments
 
 
 export function App() {
+    //como llamar variables de entorno
+    /*<h3>{process.env.REACT_APP_IMAGE_BASE_URL}</h3>*/
     return (
         <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/index" element={<HomePage />} />
-                <Route path="/Estetica" element={<Estetica />} />
-                {/*si no existe enviar /404*/}
-                <Route path="*" element={<h1>No se Ha Encontrado El Destino :(</h1>} />
-            </Routes>
+            <AnimatedRoutes/>
         </Router>
     );
 }

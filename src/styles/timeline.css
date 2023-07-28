@@ -1,39 +1,40 @@
 /*import proxima nova*/
 @font-face {
   font-family: 'Proxima Nova'; /* Nombre que asignarás a la fuente */
-  src: url('../fonts/proximanova.otf') format('opentype'); /* Ruta de la fuente */
+  /*src: url('../fonts/proximanova.otf') format('opentype');  Ruta de la fuente */
 }
 
-section {
+#timeline section {
   padding: 100px 0;
 }
 
-html, body {
+#timeline html, #timeline body {
   overflow-x: hidden;
 }
 
-body {
+body#timeline {
   font-family: "Roboto";
   font-size: 17px;
   font-weight: 400;
   background-color: #eee;
+
 }
 
-h1 {
+#timeline h1 {
   font-size: 200%;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 400;
 }
 
-header {
+#timeline header {
   /*posicionarla desde abajo*/
   padding: 150px 0;
   position: relative; /* Agregamos posicionamiento relativo al header */
   color: white;
 }
 
-.img-background {
+#timeline .img-background {
   position: absolute; /* Hacer que el div.img-background tenga posicionamiento absoluto */
   top: 0; /* Alinearlo en la parte superior del header */
   left: 0; /* Alinearlo a la izquierda del header */
@@ -42,12 +43,12 @@ header {
   /* Reemplaza 'ruta/a/la/imagen.jpg' con la ruta de tu imagen de fondo */
   background-size: contain; /* Ajustar el tamaño de la imagen de fondo para cubrir todo el div */
   /* Centrar la imagen de fondo */
-  background: url('../img/wall_canyon.jpg') no-repeat fixed center;
+  background: url('../../public/assets/img/wall_canyon.jpg') no-repeat fixed center;
   z-index: -1;
   filter: brightness(50%);
 }
 
-header p {
+#timeline header p {
   font-family: "Allura";
   color: rgba(255, 255, 255, 0.4);
   margin-bottom: 0;
@@ -55,10 +56,10 @@ header p {
   margin-top: -30px;
 }
 
-.timeline {
+#timeline .timeline {
   position: relative;
 }
-.timeline::before {
+#timeline .timeline::before {
   content: "";
   background: #C5CAE9;
   width: 5px;
@@ -68,19 +69,19 @@ header p {
   transform: translateX(-50%);
 }
 
-.timeline-item {
+#timeline .timeline-item {
   width: 100%;
   margin-bottom: 70px;
 }
-.timeline-item:nth-child(even) .timeline-content {
+#timeline .timeline-item:nth-child(even) .timeline-content {
   float: right;
   padding: 40px 30px 10px 30px;
 }
-.timeline-item:nth-child(even) .timeline-content .date {
+#timeline .timeline-item:nth-child(even) .timeline-content .date {
   right: auto;
   left: 0;
 }
-.timeline-item:nth-child(even)  .timeline-content::after {
+#timeline .timeline-item:nth-child(even)  .timeline-content::after {
   content: "";
   position: absolute;
   border-style: solid;
@@ -92,25 +93,25 @@ header p {
   border-color: transparent #f5f5f5 transparent transparent;
 }
 
-.timeline-item::after {
+#timeline .timeline-item::after {
   content: "";
   display: block;
   clear: both;
 }
 
 /*en caso de quererlo a la derecha*/
-.timeline-item.right_item .timeline-content {
+#timeline .timeline-item.right_item .timeline-content {
   float: right !important;
   padding: 40px 30px 10px 30px !important;
 }
 
-.timeline-item.right_item .timeline-content .date {
+#timeline .timeline-item.right_item .timeline-content .date {
   right: auto;
   left: 0;
 }
 
 
-.timeline-content {
+#timeline .timeline-content {
   position: relative;
   width: 45%;
   padding: 10px 30px;
@@ -118,7 +119,7 @@ header p {
   background: #f5f5f5;
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
 }
-.timeline-content::after {
+#timeline .timeline-content::after {
   content: "";
   position: absolute;
   border-style: solid;
@@ -130,7 +131,7 @@ header p {
   border-color: transparent transparent transparent #f5f5f5;
 }
 
-.timeline-img {
+#timeline .timeline-img {
   width: 30px;
   height: 30px;
   background: #3F51B5;
@@ -141,19 +142,19 @@ header p {
   margin-left: -15px;
 }
 
-a.link_reference{
-color: #5362c0;
+#timeline a.link_reference{
+  color: #5362c0;
   text-decoration: none;
   font-weight: bold;
   background: none;
-    border: none;
-    padding: 0;
+  border: none;
+  padding: 0;
   box-shadow: none;
   margin: 0 !important;
 
 }
 
-a:not(.link_reference, .none-link) {
+#timeline a:not(.link_reference, .none-link) {
   background: #3F51B5;
   color: #FFFFFF;
   padding: 8px 20px;
@@ -165,54 +166,54 @@ a:not(.link_reference, .none-link) {
   border-radius: 2px;
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
 }
-a:hover, a:active, a:focus {
+#timeline a:hover, #timeline a:active, #timeline a:focus {
   background: #32408f;
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.timeline-card {
+#timeline .timeline-card {
   padding: 0 !important;
 }
-.timeline-card p {
+#timeline .timeline-card p {
   padding: 0 20px;
 }
-.timeline-card a {
+#timeline .timeline-card a {
   margin-left: 20px;
 }
 
-.timeline-item .timeline-img-header {
+#timeline .timeline-item .timeline-img-header {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://picsum.photos/1000/800/?random") center center no-repeat;
   background-size: cover;
 }
 
-.timeline-item .timeline-content img{
+#timeline .timeline-item .timeline-content img{
   width: 100%;
   height: auto;
   margin-bottom: 20px;
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
 }
 
-.timeline-img-header {
+#timeline .timeline-img-header {
   height: 200px;
   position: relative;
   margin-bottom: 20px;
 }
-.timeline-img-header h2 {
+#timeline .timeline-img-header h2 {
   color: #FFFFFF;
   position: absolute;
   bottom: 5px;
   left: 20px;
 }
 
-blockquote {
+#timeline blockquote {
   margin-top: 30px;
   color: #757575;
   border-left-color: #3F51B5;
   padding: 0 20px;
 }
 
-.date {
+#timeline .date {
   background: rgba(0, 137, 123, 0.71);
   display: inline-block;
   color: #FFFFFF;
@@ -223,21 +224,21 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
-  .timeline::before {
+  #timeline timeline::before {
     left: 50px;
   }
-  .timeline .timeline-img {
+  #timeline .timeline .timeline-img {
     left: 50px;
   }
-  .timeline .timeline-content {
+  #timeline .timeline .timeline-content {
     max-width: 100%;
     width: auto;
     margin-left: 70px;
   }
-  .timeline .timeline-item:nth-child(even) .timeline-content {
+  #timeline .timeline .timeline-item:nth-child(even) .timeline-content {
     float: none;
   }
-  .timeline .timeline-item:nth-child(odd) .timeline-content::after {
+  #timeline .timeline .timeline-item:nth-child(odd) .timeline-content::after {
     content: "";
     position: absolute;
     border-style: solid;
@@ -252,19 +253,19 @@ blockquote {
 
 /*custom css*/
 
-.peque-cont{
+#timeline .peque-cont{
   width: 65%;
 }
 
 /*si es mas grande que 1300 px*/
 @media screen and (min-width: 1300px){
-  .peque-cont{
+  #timeline .peque-cont{
     max-width: 800px;
   }
 }
 
 
-h1.textTittle{
+#timeline h1.textTittle{
   font-size: 42px;
   font-family: 'Proxima Nova' , sans-serif;
   line-height: 1.2em;
@@ -272,7 +273,7 @@ h1.textTittle{
   color: #595D61;
 }
 
-h2.textTittle{
+#timeline h2.textTittle{
   font-size: 34px;
   font-family: 'Proxima Nova' , sans-serif;
   line-height: 1.2em;
@@ -280,7 +281,7 @@ h2.textTittle{
   color: #595D61;
 }
 
-.peque-cont p{
+#timeline .peque-cont p{
   font-family: 'Proxima Nova' , sans-serif;
   line-height: 1.5em;
   font-size: 20px;

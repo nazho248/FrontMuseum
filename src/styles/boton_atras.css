@@ -37,17 +37,15 @@
 .back-button::after{
     content: "Atrás";
     color: transparent;
-    background: transparent;
-    margin-left: 0;
+    background-color: transparent;
+    margin-left: 10px;
     font-size: 0;
     transition: 1s;
+    border-radius: 500px;
 }
 
 
 .back-button:hover::after {
-    /*
-    content: "Atrás";
-    */
     display: inline-block;
     margin-left: 10px;
     color: white;

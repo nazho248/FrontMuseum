@@ -1,0 +1,14 @@
+#customScroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+#customScroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #5f5f5f;
+
+}
+
+#customScroll::-webkit-scrollbar-thumb {
+    background-color: #ffd741;
+    outline: 1px solid slategrey;
+}

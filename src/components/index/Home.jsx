@@ -13,10 +13,11 @@ export function Home({bottomrows}) {
                     <ButtonModal/>
 
                     <div
-                        className="flex items-center justify-center h-1"
+                        className="flex items-center justify-center
+                         h-1"
                         style={{height: "70%"}}>
                         {/*make a squeare tailwindcss*/}
-                        <div className=" border-solid border-4 border-yellow-200 rounded-lg p-10">
+                        <div className=" border-solid border-4 border-yellow-200 rounded-lg p-14 mt-40">
                             <h1 className="text-yellow-200 text-center text-6xl mb-2">
                                 Releyendo Artefactos
                             </h1>
