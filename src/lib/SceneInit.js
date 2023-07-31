@@ -10,7 +10,8 @@ export default class SceneInit {
         this.renderer = undefined;
 
         // NOTE: Camera params;
-        this.fov = 45;
+        this.fov = 25;
+        //empezar en angulo 45º
         this.nearPlane = 1;
         this.farPlane = 1000;
         this.canvasId = canvasId;
@@ -32,9 +33,11 @@ export default class SceneInit {
             this.fov,
             (contenedor.clientWidth) / contenedor.clientHeight,
             1,
-            1000
+            1000,
         );
         this.camera.position.z = 48;
+
+        this.camera.position.y = 30;
 
         // NOTE: Specify a canvas which is already created in the HTML.
         const canvas = document.getElementById(this.canvasId);
@@ -68,7 +71,7 @@ export default class SceneInit {
         //document.body.appendChild(this.stats.dom); //estadisticas de rendimiento ThreeJs
 
         // ambient light which is for the whole scene
-        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.9) ;
+        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.8) ;
         this.ambientLight.castShadow = true;
         this.scene.add(this.ambientLight);
 

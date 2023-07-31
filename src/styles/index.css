@@ -8,7 +8,9 @@ body#Home {
     height: 100%;
     margin: 0;
     padding: 0;
+    /*
     background: url("../../public/assets/img/canonautor.jpg") no-repeat center center fixed;
+    */
     background-size: cover;
 }
 
@@ -17,18 +19,20 @@ body#Home {
     color: #FFFFFF;
 }
 
-#Home .frame {
+ .frame {
     position: relative;
     width: 100vw;
     height: 100vh;
     /*always showing the border*/
+   /*
    background: url("../../public/assets/img/border-smooth.png") no-repeat center center fixed;
+   */
     background-size: 100% 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 
-#Home .contenty {
+ .contenty {
     position: relative;
     overflow: hidden;
     top: 50%;
@@ -41,7 +45,7 @@ body#Home {
     background: url("../../public/assets/img/canonautor.jpg") no-repeat top fixed;
     */
     background-size: cover;
-    background-color: rgb(43, 51, 57);
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     background-clip: content-box;
@@ -50,19 +54,20 @@ body#Home {
 }
 
 /*    <!--botón flotante de menu en la parte superior derecha-->*/
-#Home .menu {
+ .menu {
     background-size: cover;
     display: block;
     position: fixed;
-    right: 0;
-    margin-right: 40px;
+
+    top: 5%;
+    right: 12%;
     z-index: 999;
 }
 
 
 
 /*Bottom navigation cols*/
-#Home .bottom-navigation {
+ .bottom-navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -72,24 +77,30 @@ body#Home {
     left: 50px;
     right: 50px;
     color: white;
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
     cursor: pointer;
 }
+/*si es mayor a 768*/
+@media (min-width: 1000px) {
+    #Home .bottom-navigation {
+        font-size: 30px;
+    }
+}
 
-#Home .bottom-navigation .col {
+ .bottom-navigation .col {
     backdrop-filter: blur(2px) saturate(100%);
     background-color: rgba(0, 0, 0, 0.4);
     transition: 0.5s;
     flex-grow: 1;
 }
 
-#Home .bottom-navigation .col div {
+ .bottom-navigation .col div {
     padding: 20px;
     transition: 0.5s;
 }
 
-#Home .bottom-navigation .col:hover div {
+ .bottom-navigation .col:hover div {
     padding: 20px;
     width: 100%;
     height: 100%;
@@ -99,7 +110,7 @@ body#Home {
     color: darkred;
 }
 
-#Home .overlay {
+ .overlay {
     position: fixed;
     bottom: -100vh;
     left: 0;
@@ -112,7 +123,7 @@ body#Home {
     opacity: 0;
 }
 
-#Home .bottom-navigation .col:hover .overlay {
+ .bottom-navigation .col:hover .overlay {
     height: calc(83vh - 10%); /* Ajustar según sea necesario */
     bottom: 0;
     opacity: 1;
@@ -121,31 +132,31 @@ body#Home {
 /*MENU DESPLEGABLE  */
 
 /*select class ic*/
-#Home .icon {
+ .icon {
     color: black;
     cursor: pointer;
     transition: 0.5s;
 }
 
-#Home .icon.close:hover {
+ .icon.close:hover {
     color: red;
     transition: 0.5s;
 }
 
 
 /*card aligned to the center*/
-#Home .card.active {
-    top: 30%;
+ .card.active {
+    top: 15%;
     background-color: white !important;
     color: black !important;
     z-index: 9999 !important;
 }
 
-#Home .card.active .card-footer, .card.active hr{
+ .card.active .card-footer, .card.active hr{
     display: block;
 }
 
-#Home .card-default {
+ .card-default {
     position: absolute;
     left: 0;
     right: 0;
@@ -157,14 +168,14 @@ body#Home {
     z-index: 3;
 }
 
-#Home .card {
+ .card {
     top: -101vh;
     transition: all 1s ease-in-out;
     background-color: transparent !important;
     color: transparent !important;
 }
 
-#Home .card .card-footer, .card hr{
+ .card .card-footer, .card hr{
     display: none;
 }
 
@@ -186,7 +197,7 @@ body#Home {
 }
 
 #nav-icon:hover span {
-    background: #ff9e3b;
+    background: #fc9f8e;
     transition: 0.25s;
 }
 
@@ -195,7 +206,7 @@ body#Home {
     position: absolute;
     height: 7px;
     width: 100%;
-    background: #fcee89;
+    background: #ffd869;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -208,6 +219,7 @@ body#Home {
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
 }
+
 
 #nav-icon span:nth-child(1) {
     top: 0px;
@@ -255,4 +267,6 @@ body#Home {
     top: 39px;
     left: 8px;
 }
+
 /*fin hamburger menu*/
+

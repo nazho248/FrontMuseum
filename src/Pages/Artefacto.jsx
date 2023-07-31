@@ -2,8 +2,7 @@ import {Fragment} from "react";
 import {BackBtn} from "../BackBtn";
 import {ModelViewer} from "../components/artefacto/ModelViewer";
 import {Content} from "../components/artefacto/Content";
-import {RightSideBar} from "../components/artefacto/RightSideBar";
-import {NavPanel} from "../components/estetica/NavPanel";
+import {NavPanel} from "../components/artefacto/NavPanel";
 import {motion} from 'framer-motion'
 
 export function Artefacto() {
@@ -23,7 +22,6 @@ export function Artefacto() {
             <div className="flex min-h-screen h-screen">
                 <ModelViewer/>
                 <Content/>
-                <RightSideBar/>
                 <NavPanel/>
             </div>
         </motion.div>

@@ -254,4 +254,16 @@ a{
     top: 39px;
     left: 8px;
 }
+
+/*en caso de que sea menor a 768px*/
+@media (max-width: 768px) {
+    #nav-icon span {
+        height: 4px;
+    }
+    #nav-icon {
+        width: 45px;
+        height: 30px;
+    }
+
+}
 /*fin hamburger menu*/

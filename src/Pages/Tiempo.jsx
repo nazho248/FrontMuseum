@@ -1,18 +1,18 @@
 import {BackBtn} from "../BackBtn";
 import {Fragment} from "react";
-import {TimeHeaader} from "../components/tiempo/TimeHeaader";
-import {Timeline} from "../components/tiempo/Timeline";
+import {motion} from "framer-motion";
 
 export function Tiempo() {
-    document.body.id = "timeline";
     return (
-        <Fragment>
+        <motion.div
+            initial={{x: 1000}}
+            animate={{x: 0}}
+            exit={{x: 1000}}
+            transition={{duration: 0.5}}
+        >
+            {/*fondo */}
+            <div id="timeline" style={{backgroundImage: "url('/assets/img/canonautor.jpg')"}}></div>
             <BackBtn/>
-            <TimeHeaader/>
-            <Timeline/>
-
-
-
-        </Fragment>
+        </motion.div>
     )
 }

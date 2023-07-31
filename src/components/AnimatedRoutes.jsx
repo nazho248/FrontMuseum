@@ -17,6 +17,7 @@ function AnimatedRoutes() {
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/index" element={<HomePage/>}/>
                 <Route path="/Estetica" element={<Estetica/>}/>
+                <Route path="/Estetica" element={<Estetica/>}/>
                 <Route path="/Tiempo" element={<Tiempo/>}/>
                 <Route path="/Artefacto" element={<Artefacto/>}/>
                 <Route path="/Galeria" element={<Galeria/>}/>

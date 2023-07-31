@@ -12,7 +12,6 @@ export function ModelViewer() {
         test.initialize();
         test.animate();
 
-        document.getElementById('myThreeJsCanvas').classList.add('rounded-lg');
 
 
         const handleResize = () => {
@@ -91,12 +90,16 @@ export function ModelViewer() {
     }, [])
 
     return (
-        <div className="flex flex-col w-5/12 bg-orange-200 align-middle p-2 justify-center items-center">
-            <h1 className="text-4xl text-center mb-5 text-orange-800 font-bold">UDES C123</h1>
-            <div id="Model1" className="w-full h-3/4 bg-white rounded-lg">
-                <canvas id="myThreeJsCanvas"></canvas>
+        <div className="flex flex-col w-6/12  align-middle p-5 justify-center items-center" style={{ backgroundColor: "#f9e0dc"}}>
+            <h1 className="text-5xl text-center mb-12 text-orange-800 font-bold" style={{color : "#A62422"}}>UDES C123</h1>
+            <div id="Model1" className="w-10/12 h-4/6 bg-white rounded-lg ">
+                <canvas id="myThreeJsCanvas" className="rounded-lg"  ></canvas>
             </div>
-
+            <p className=" w-10/12 text-4xl mt-10 text-center font-light" style={{color: "#A62422", fontSize: "2rem"
+            }}>
+                Copa con borde invertido y labio recto, sobre el hombro salen dos
+                agarraderas, cuerpo elipsoide.
+            </p>
         </div>
 
     )

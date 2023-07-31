@@ -7,6 +7,7 @@ import './styles/notFound.css';
 import './styles/boton_atras.css';
 import './styles/timeline.css';
 import './styles/estetic.css';
+import './styles/galery.css';
 
 
 

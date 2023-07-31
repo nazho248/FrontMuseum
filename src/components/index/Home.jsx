@@ -7,24 +7,22 @@ import {ModalInfo} from "../ModalInfo";
 export function Home({bottomrows}) {
     return (
         <Fragment>
-            <div className="frame">
-                <div className="contenty">
-
+            <div className="frame" style={{ backgroundImage: "url('/assets/img/border-smooth.png')" }}>
                     <ButtonModal/>
+                <div className="contenty flex items-center justify-center">
+                    <div  className="flex flex-row items-center justify-center">
 
-                    <div
-                        className="flex items-center justify-center
-                         h-1"
-                        style={{height: "70%"}}>
-                        {/*make a squeare tailwindcss*/}
-                        <div className=" border-solid border-4 border-yellow-200 rounded-lg p-14 mt-40">
-                            <h1 className="text-yellow-200 text-center text-6xl mb-2">
+                        <div className=" border-solid border-4  rounded-lg p-10 md:p-16
+                        " style={{ borderColor: '#ffd869' }}>
+                            <h1 className=" text-center text-2xl mb-2 md:text-6xl" style={{ color: '#ffd869' }}>
                                 Releyendo Artefactos
                             </h1>
-                            <p className="text-orange-200 text-center text-3xl mb-2">
-                                Museo arqueológico, etnológico e histórico
+                            <p className=" text-center text-2xl mb-2 md:text-3xl
+                            " style={{ color: '#fc9f8e' }}>
+                                Museo Arqueológico, Etnológico e Histórico
                             </p>
-                            <p className="text-orange-200 text-end text-3xl">UDES</p>
+                            <p className=" text-end text-2xl  md:text-3xl" style={{ color: '#fc9f8e' }}>
+                                UDES</p>
                         </div>
                     </div>
                     <BottomLinks bottomrows={bottomrows}/>

@@ -35,37 +35,10 @@ export function HomePage() {
     //agregar id al body
     document.body.id = "Home";
 
-    //const [isLoading, setIsLoading] = useState(true);
-    /*useEffect(() => {
-        // Simulando una carga asincrónica (podrías reemplazarlo con una llamada a una API, por ejemplo)
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000); // Por ejemplo, 2000ms para simular una carga de 2 segundos
-    }, [])*/
-
-    /*
-        useEffect(() => {
-            // Simula la carga asincrónica de recursos (puedes agregar más recursos aquí)
-            Promise.all([
-                // Cargar tus imágenes u otros recursos aquí
-                new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = '/assets/img/canonautor.jpg';
-                    img.src = '/assets/img/social.jpg';
-                    img.src = '/assets/img/arqueologia.jpg';
-                    img.src = '/assets/img/estetica.jpg';
-                    img.onload = resolve;
-                }),
-            ]).then(() => {
-                // Cuando todos los recursos estén listos, oculta la pantalla de carga
-                setIsLoading(false);
-            });
-        }, []);
-    */
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        setIsLoaded(true)
+        setIsLoaded(false)
 
         const preloadImages = async () => {
             // Crea una promesa para cargar cada imagen
@@ -73,6 +46,7 @@ export function HomePage() {
                 '/assets/img/social.jpg',
                 '/assets/img/arqueologia.jpg',
                 '/assets/img/estetica.jpg',
+                '/assets/img/border-smooth.png',
                 // Agrega más rutas de imágenes aquí
             ].map((src) => {
                 return new Promise((resolve) => {
@@ -83,13 +57,16 @@ export function HomePage() {
             });
 
             // Espera a que todas las imágenes se carguen antes de mostrar el contenido principal
+
+            //las imagenes ya estan cargadas?
             await Promise.all(imagePromises);
             //esperar 2 segundos
-            setTimeout(() => {
-                setIsLoaded(true)
-                console.log('imagenes cargadas');
+            setIsLoaded(true)
+            console.log('imagenes cargadas');
+/*            setTimeout(() => {
 
-            }, 1);
+
+            }, 1);*/
         };
 
         preloadImages();
@@ -103,10 +80,10 @@ export function HomePage() {
                 {isLoaded && (
                     // animacion de entrada zoom
                     <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
+                        initial={{ x: -2000, scale: 0 }}
+                        animate={{ x: 0, scale: 1 }}
                         exit={{
-                            opacity: 0,
+                            x: 2000,
                             transition: { duration: 0.5 },
                             animation: 'easeInOut',
                         }}
