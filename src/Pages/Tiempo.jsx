@@ -6,14 +6,27 @@ import {CardText} from "../components/tiempo/CardText";
 import {TimeImages} from "../components/tiempo/TimeImages";
 import {useParams} from "react-router-dom";
 import {NotFound} from "./NotFound";
+import { useEffect, useState} from "react";
 
 
 export function Tiempo() {
     document.body.id = "";
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const data_tiempo = Object.values(require('../data/timeline.json'));
     const presentacion = data_tiempo.find(elemento => elemento.id === -1);
     const firstyear = data_tiempo[0].epoca
+
+
+    useEffect(() => {
+        // Simulamos un retraso de 1 segundo para cargar los recursos (ajusta según tus necesidades)
+        const loadingDelay = setTimeout(() => {
+            setIsLoaded(true);
+        }, 500);
+
+        return () => clearTimeout(loadingDelay);
+    }, [])
+
 
     const {year} = useParams();
     //type definido para limitarlo a info e images
@@ -21,7 +34,7 @@ export function Tiempo() {
     let epocaimpresion = 0;
 
     if (year !== undefined) {
-         epocaimpresion = data_tiempo.findIndex(
+        epocaimpresion = data_tiempo.findIndex(
             (elemento) => elemento.epoca === parseInt(year));
         if ((epocaimpresion !== -1) && (type === "info" || type === "images")) {
             // Se encontró una coincidencia, epocaimpresion contendrá el índice correspondiente
@@ -33,7 +46,7 @@ export function Tiempo() {
     }
     let epocaAnterior = -1;
 
-    if( epocaimpresion > 0){
+    if (epocaimpresion > 0) {
         epocaAnterior = data_tiempo[epocaimpresion - 1].epoca;
     }
 
@@ -44,9 +57,9 @@ export function Tiempo() {
     }
 
 
+
     return (
         <div>
-
             <div
                 className="bg-fixed bg-cover bg-center h-screen"
                 style={{
@@ -61,29 +74,37 @@ export function Tiempo() {
                     zIndex: "1"
                 }}
             ></div>
-
-
-            <motion.div className="flex flex-col relative z-10 h-screen "
+            <div className="flex flex-col relative z-10 h-screen ">
+                {/*                animate={{ y: isLoaded ? 0 : -1000, opacity: isLoaded ? 1 : 0 }}
+*/}
+                <motion.div
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: isLoaded ? 1 : 0 }}
+                    transition={{duration: 1}}
+                    >
+                <BackBtn/>
+                <TopTime number={epocaAnterior} isPresentation={year === undefined} fecha={data_tiempo[epocaimpresion].epoca} fechaAnterior={data_tiempo[epocaimpresion].epoca_ant}/>
+                </motion.div>
+            <motion.div className="flex flex-col items-center justify-center w-full h-full"
                         initial={{x: 1000, opacity: 0}}
                         animate={{x: 0, opacity: 1}}
                         exit={{x: 1000, opacity: 0}}
                         transition={{duration: 0.5}}
             >
-                <BackBtn/>
-                <TopTime/>
 
                 {/*contenido de texto*/}
                 {year === undefined ?
+
                     <TimePresentation data={presentacion} year={firstyear}/>
                     : type === "info" ?
-                        <CardText data={data_tiempo[epocaimpresion]} anterior={epocaAnterior} /> :
+                        <CardText data={data_tiempo[epocaimpresion]} anterior={epocaAnterior}/> :
                         type === "images" ?
                             <TimeImages data={data_tiempo[epocaimpresion]} ultimo={isLastOne}/>
                             :
                             <NotFound/>
                 }
-
             </motion.div>
+            </div>
         </div>
     );
 }

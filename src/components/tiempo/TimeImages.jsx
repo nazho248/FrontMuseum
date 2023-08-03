@@ -37,8 +37,8 @@ export function TimeImages(props) {
             }
 
 
-            <div className={"flex " + (props.ultimo ? "w-10/12" : "w-9/12") + " space-x-14 mx-auto"}>
-                <div className=" border border-gray-200 rounded-lg shadow dark:bg-gray-800  max-w-[550px] flex-1"
+            <div className={"flex " + (props.ultimo ? "w-10/12" : "w-9/12") + " space-x-14 mx-auto justify-center items-center"}>
+                <div className=" border border-gray-200 rounded-lg shadow  max-w-[550px] flex-1"
                      style={{backgroundColor: "rgba(255,255,255,0.67)"}}>
                     <img className="rounded-t-lg" src="https://picsum.photos/1500/1000" alt=""/>
                     <div className="p-5">

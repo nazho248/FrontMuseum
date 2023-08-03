@@ -1,6 +1,6 @@
 import { BiInfoCircle } from 'react-icons/bi';
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 
 export function Main_Image({ currentImage, setCurrentImage }) {
     const [isTextHidden, setTextHidden] = useState(true);
@@ -45,6 +45,7 @@ export function Main_Image({ currentImage, setCurrentImage }) {
                         animate={'show'}
                         initial={'hide'}
                         exit={'exit'}
+                        lazyload={true}
 
             />
             <motion.div
