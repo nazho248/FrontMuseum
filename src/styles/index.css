@@ -8,6 +8,7 @@ body#Home {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: black;
     /*
     background: url("../../public/assets/img/canonautor.jpg") no-repeat center center fixed;
     */

@@ -10,22 +10,23 @@ export function HomePage() {
     const indexCards = [
         {
             id: 1, title: 'Estética',
-            link: '/estetica', imageSrc: '/assets/img/estetica.jpg',
+            link: '/Estetica', imageSrc: '/assets/img/estetica.jpg',
             alt: 'Descripcion Imagen 1'
         },
         {
             id: 2, title: 'Tiempo',
-            link: '/tiempo', imageSrc: '/assets/img/cultura.jpg',
+            link: '/Tiempo', imageSrc: '/assets/img/cultura.jpg',
             alt: 'Descripcion Imagen 2'
         },
         {
             id: 3, title: 'Arte-Facto',
-            link: '/artefacto', imageSrc: '/assets/img/arqueologia.jpg',
-            alt: 'imagen 2'
+            link: '/Artefacto', imageSrc: '/assets/img/arqueologia.jpg',
+            alt: 'imagen 2',
+            customStyle: "-390px"
         },
         {
             id: 4, title: 'Galería',
-            link: '/galeria', imageSrc: '/assets/img/social.jpg',
+            link: '/Galeria', imageSrc: '/assets/img/social.jpg',
             alt: 'imagen 2'
         }
     ];
@@ -80,10 +81,10 @@ export function HomePage() {
                 {isLoaded && (
                     // animacion de entrada zoom
                     <motion.div
-                        initial={{ x: -2000, scale: 0 }}
-                        animate={{ x: 0, scale: 1 }}
+                        initial={{ x: -2000, scale: 0.5, opacity: 0 }}
+                        animate={{ x: 0, scale: 1 , opacity: 1}}
                         exit={{
-                            x: 2000,
+                            x: 2000, scale: 0.5, opacity: 0,
                             transition: { duration: 0.5 },
                             animation: 'easeInOut',
                         }}

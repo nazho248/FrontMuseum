@@ -21,7 +21,8 @@ export function BottomLinks({bottomrows}) {
                 <div className="col border-t-4 " key={index} style={{borderColor: '#ffd869'}}>
                     {/* Utilizamos el índice como clave si no tenemos una propiedad 'id' única */}
                     <Link to={bottomrow.link}>
-                        <img src={bottomrow.imageSrc} className="overlay" alt={bottomrow.alt} />
+                        {/*si tiene custom style colocarselo*/}
+                        <img src={bottomrow.imageSrc} className="overlay" alt={bottomrow.alt} style={bottomrow.customStyle ? { objectPosition: bottomrow.customStyle } : {}}/>
                         <div>
                             <h2 className="text-end pr-10" style={{color: '#fc9f8e'}}
                             >{bottomrow.title}</h2>

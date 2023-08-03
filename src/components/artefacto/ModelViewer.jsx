@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 import SceneInit from '../../lib/SceneInit';
 
-export function ModelViewer() {
+export function ModelViewer(artefacto) {
     //url del modelo en /pulic/assets/models
     let modelUrl = '/assets/models/C432.glb';
     useEffect(() => {
@@ -91,14 +91,14 @@ export function ModelViewer() {
 
     return (
         <div className="flex flex-col w-6/12  align-middle p-5 justify-center items-center" style={{ backgroundColor: "#f9e0dc"}}>
-            <h1 className="text-5xl text-center mb-12 text-orange-800 font-bold" style={{color : "#A62422"}}>UDES C123</h1>
+            <h1 className="text-5xl text-center mb-12 text-orange-800 font-bold" style={{color : "#A62422"}}>UDES {artefacto.artefacto.nombre
+            }</h1>
             <div id="Model1" className="w-10/12 h-4/6 bg-white rounded-lg ">
                 <canvas id="myThreeJsCanvas" className="rounded-lg"  ></canvas>
             </div>
-            <p className=" w-10/12 text-4xl mt-10 text-center font-light" style={{color: "#A62422", fontSize: "2rem"
+            <p className=" w-10/12 text-xl mt-10 text-center font-light" style={{color: "#A62422", fontSize: "2rem"
             }}>
-                Copa con borde invertido y labio recto, sobre el hombro salen dos
-                agarraderas, cuerpo elipsoide.
+                {artefacto.artefacto.descripcion}
             </p>
         </div>
 
