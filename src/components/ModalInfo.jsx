@@ -57,7 +57,9 @@ export function ModalInfo() {
                                     Johana Rojas Sierra,docente investigadora del Programa Tecnología en Comunicación
                                     Gráfica
                                 </li>
-
+                                <li >
+                                    Jair Andres González Ruíz, estudiante tesista del Programa de Ingeniería de Software
+                                </li>
                             </ul>
 
                         </div>
@@ -84,10 +86,7 @@ export function ModalInfo() {
                             </ul>
                         </div>
                     </div>
-                    <li className="list-disc list-outside space-y-2">
-                        Jair Andres González Ruíz, estudiante tesista del Programa de Ingeniería de Software
-                    </li>
-                    <br/>
+
 
                     <p className="card-text text-sm lg:text-base text-justify">
                         Un especial agradecimiento a los estudiantes del Programa de Antropología y Tecnología en

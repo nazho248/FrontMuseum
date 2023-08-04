@@ -117,7 +117,7 @@ export function Tiempo() {
                     zIndex: "1"
                 }}
             ></div>
-            <div className="flex flex-col relative z-10 h-screen ">
+            <div className="flex flex-col relative z-10 h-screen max-h-screen">
                 <motion.div
                     initial={{opacity: 0}}
                     animate={{opacity: isLoaded ? 1 : 0}}
