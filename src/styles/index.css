@@ -147,8 +147,8 @@ body#Home {
 
 /*card aligned to the center*/
  .card.active {
-    top: 15%;
-    background-color: white !important;
+    top: 10%;
+    background-color: #e2e8f0 !important;
     color: black !important;
     z-index: 9999 !important;
 }
@@ -164,16 +164,19 @@ body#Home {
     margin-left: auto;
     margin-right: auto;
     top: 25%;
-    width: 60%;
-    border-radius: 25px;
+    width: 85%;
+    border-radius: 10px;
     z-index: 3;
 }
 
  .card {
-    top: -101vh;
+    top: -110vh;
     transition: all 1s ease-in-out;
     background-color: transparent !important;
     color: transparent !important;
+     z-index: -1 !important;
+
+     max-height: 80vh;
 }
 
  .card .card-footer, .card hr{

@@ -6,7 +6,6 @@ import {useNavigate} from "react-router-dom";
 export function CardText(props) {
     const navigate = useNavigate();
 
-    console.log(props.anterior)
 
     let atrasredirect = "/Tiempo";
     if (props.anterior != -1) {

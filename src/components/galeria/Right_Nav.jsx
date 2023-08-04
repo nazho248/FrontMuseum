@@ -2,7 +2,7 @@ import {Fragment, useState} from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { motion } from "framer-motion";
 
-export function Right_Nav({ setCurrentImage }) {
+export function Right_Nav({ setCurrentImage, images }) {
     const [showThumbmails, setShowThumbmails] = useState(true);
 
     const handleExpandImagesBtnClick = () => {
@@ -14,8 +14,8 @@ export function Right_Nav({ setCurrentImage }) {
             document.body.classList.remove("hide-thumbnails");
         }
     }
-    const handleThumbnailClick = (imageUrl) => {
-        setCurrentImage(imageUrl);
+    const handleThumbnailClick = (imageId) => {
+        setCurrentImage(imageId);
     };
 
     return (
@@ -33,45 +33,22 @@ export function Right_Nav({ setCurrentImage }) {
                 )}
                 <i className='bx bxs-chevron-right bx-sm'></i>
             </div>
-            {/* Resto del código ... */}
+
             <div className="thumbnails">
                 <div className="thumbnails-container">
-                    <img
-                        src="assets/img/ilustraciones/pieza_guane_4_indigena_con_las_hormigas.jpg"
-                        alt="Thumbnail 1"
-                        onClick={() =>
-                            handleThumbnailClick(
-                                "assets/img/ilustraciones/pieza_guane_4_indigena_con_las_hormigas.jpg"
-                            )
-                        }
-                    />
-                    <img
-                        src="assets/img/ilustraciones/piezas_guane_1_caldero.jpg"
-                        alt="Thumbnail 2"
-                        onClick={() =>
-                            handleThumbnailClick(
-                                "assets/img/ilustraciones/piezas_guane_1_caldero.jpg"
-                            )
-                        }
-                    />
-                    <img
-                        src="assets/img/ilustraciones/piezas_guanes_2_casa_e_indigena.jpg"
-                        alt="Thumbnail 3"
-                        onClick={() =>
-                            handleThumbnailClick(
-                                "assets/img/ilustraciones/piezas_guanes_2_casa_e_indigena.jpg"
-                            )
-                        }
-                    />
-                    <img
-                        src="assets/img/ilustraciones/piezas_guanes_3_bodegon_peses_ormigas_ollas_etc.jpg"
-                        alt="Thumbnail 4"
-                        onClick={() =>
-                            handleThumbnailClick(
-                                "assets/img/ilustraciones/piezas_guanes_3_bodegon_peses_ormigas_ollas_etc.jpg"
-                            )
-                        }
-                    />
+
+            {images.map((image, index) => (
+                <img
+                    src={"assets/img/galeria/"+image.imgsrc}
+                    alt="Thumbnail 1"
+                    onClick={() =>
+                        handleThumbnailClick(
+                            image.id
+                        )
+                    }
+                />
+            ))}
+
                     {/* más miniaturas... */}
                 </div>
             </div>

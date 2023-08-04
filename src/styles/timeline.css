@@ -6,6 +6,7 @@
   /*
   background: url("../../public/assets/img/canonautor.jpg") no-repeat center center fixed;
   */
+  overflow: hidden;
   background-size: cover;
 }
 

@@ -10,5 +10,6 @@
 
 #customScroll::-webkit-scrollbar-thumb {
     background-color: #a52422;
-    outline: 1px solid slategrey;
+    outline: 1px solid #907070;
+    border-radius: 10px;
 }

@@ -33,14 +33,15 @@ export function Main_Image({ currentImage, setCurrentImage }) {
         }
     };
 
-    useEffect(() => {;
+    useEffect(() => {
+        console.log("owo");
     }, [currentImage, controls]);
 
     return (
         <div
             className="main-image">
-            <motion.img src={currentImage} alt="Main Image"
-                        key={currentImage}
+            <motion.img src={"assets/img/galeria/"+currentImage.imgsrc} alt="Main Image"
+                        key={currentImage.id}
                         variants={variants}
                         animate={'show'}
                         initial={'hide'}
@@ -49,19 +50,17 @@ export function Main_Image({ currentImage, setCurrentImage }) {
 
             />
             <motion.div
-                className="info-floating"
+                className="info-floating transform scale-75 lg:scale-100"
                 onClick={handleInfoCircleClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
             >
-                <BiInfoCircle className="text-slate-100" size={28} />
+                <BiInfoCircle className="text-slate-100
+                " size={28} />
             </motion.div>
             <div className={`image-text ${isTextHidden ? "hidden-text" : ""}`}>
                 <p className="text-white">
-                    Pellentesque vulputate volutpat neque. In pretium sapien id pellentesque imperdiet. Praesent ut ipsum auctor,
-                    facilisis erat at, bibendum lorem. Vivamus efficitur pretium eros, sit amet maximus lorem molestie eget. Sed
-                    tortor metus, ullamcorper nec accumsan quis, euismod vestibulum risus. Sed ornare lorem quam, vitae ultricies
-                    nisl dignissim lobortis. Nullam quis pretium nunc. Mauris tempus tincidunt arcu sed dapibus.
+                    {currentImage.descripcion}
                 </p>
             </div>
         </div>

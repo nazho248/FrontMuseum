@@ -1,8 +1,44 @@
 {
   "1": {
-    "imgsrc": "img.jpg",
+    "id": 0,
+    "imgsrc": "pieza_guane_4_indigena_con_las_hormigas.jpg",
     "audio": "audio.owo",
     "descripcion": "lorem ipsum",
+    "alt": "lorem ipsum dorem"
+  },
+  "2": {
+    "id": 1,
+    "imgsrc": "piezas_guane_1_caldero.jpg",
+    "audio": "audio.owo",
+    "descripcion": "lorem ipsum",
+    "alt": "lorem ipsum dorem"
+  },
+  "3": {
+    "id": 2,
+    "imgsrc": "piezas_guanes_2_casa_e_indigena.jpg",
+    "audio": "audio.owo",
+    "descripcion": "lorem ipsum",
+    "alt": "lorem ipsum dorem"
+  },
+  "4": {
+    "id": 3,
+    "imgsrc": "piezas_guanes_3_bodegon_peses_ormigas_ollas_etc.jpg",
+    "audio": "audio.owo",
+    "descripcion": "lorem ipsum",
+    "alt": "lorem ipsum dorem"
+  },
+  "5": {
+    "id": 4,
+    "imgsrc": "Grethel_Florez-Sierra-Capas_concentricas-Colombiana.jpeg",
+    "audio": "audio.owo",
+    "descripcion": "Capas concéntricas reorganizadas con las algunas figuras geométricas plasmadas en las piezas arqueológicas resaltando la posible la huella. (formato 1/2 pliego (50x70 cm)).",
+    "alt": "lorem ipsum dorem"
+  },
+  "6": {
+    "id": 5,
+    "imgsrc": "Grethel_Flórez-Sierra-Radiación-Colombiana.jpeg",
+    "audio": "audio.owo",
+    "descripcion": "Abstracción desde el biomimetismo, la naturaleza como fuente de inspiración con la secuencia a Fibonacci (planta suculenta), se plantea de manera orgánica, radiación, rotación gradual, a partir de triángulos, colores complementarios, azul, naranja con el análogo amarillo adicionando colores terracota. (formato 1/2 pliego (50x70)).",
     "alt": "lorem ipsum dorem"
   }
 }
