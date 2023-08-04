@@ -91,13 +91,12 @@ export function ModelViewer(artefacto) {
 
     return (
         <div className="flex flex-col w-6/12  align-middle p-5 justify-center items-center" style={{ backgroundColor: "#f9e0dc"}}>
-            <h1 className="text-5xl text-center mb-12 text-orange-800 font-bold" style={{color : "#A62422"}}>UDES {artefacto.artefacto.nombre
+            <h1 className="text-xl lg:text-5xl text-center mb-4 lg:mb-12 text-orange-800 font-bold" style={{color : "#A62422"}}>UDES {artefacto.artefacto.nombre
             }</h1>
-            <div id="Model1" className="w-10/12 h-4/6 bg-white rounded-lg ">
+            <div id="Model1" className="w-10/12 h-full lg:h-4/6 bg-white rounded-lg ">
                 <canvas id="myThreeJsCanvas" className="rounded-lg"  ></canvas>
             </div>
-            <p className=" w-10/12 text-xl mt-10 text-center font-light" style={{color: "#A62422", fontSize: "2rem"
-            }}>
+            <p className=" w-10/12 text-base lg:text-2xl mt-3 lg:mt-10 text-center font-light" style={{color: "#A62422"}} >
                 {artefacto.artefacto.descripcion}
             </p>
         </div>

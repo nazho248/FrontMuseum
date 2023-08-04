@@ -32,7 +32,7 @@ export function NavPanel(artefactos) {
                             src={url_path + "assets/img/artefactos/Thumbs/" + artefacto.nombre + "_tn.jpg"}
                             alt=""
                             style={{
-                                aspectRatio: "1/1", objectFit: "cover", objectPosition: "-12px  center"
+                                aspectRatio: "1/1", objectFit: "cover", objectPosition: "left"
                             }}
                         />
                     </Link>
