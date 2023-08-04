@@ -18,11 +18,11 @@
     ],
     "imagenes": [
       {
-        "imagen": "img.jpg",
+        "imagen": "expedicion_los_santos.jpg",
         "descripcion": "Expedición realizada en 1939 por el arqueólogo Justus Wolfram Schottelius en el municipio de Mesa de Los Santos, Santander."
       },
       {
-        "imagen": "img.jpg",
+        "imagen": "arepa_tamal.jpg",
         "descripcion": "Arepa y tamal santandereano"
       }
     ]
@@ -41,7 +41,7 @@
     ],
     "imagenes": [
       {
-        "imagen": "img.jpg",
+        "imagen": "africano_mestizo.jpg",
         "descripcion": "Tipo africano y mestizo. Provincia de Santander."
       }
     ]
@@ -65,7 +65,7 @@
     ],
     "imagenes": [
       {
-        "imagen": "img.jpg",
+        "imagen": "grupos_conquista.jpg",
         "descripcion": "Grupos indígenas en la época de la Conquista"
       }
     ]
@@ -84,11 +84,11 @@
     ],
     "imagenes": [
       {
-        "imagen": "img.jpg",
+        "imagen": "distancias_asentamientos.png",
         "descripcion": "Distancias entre asentamientos indígenas y poblados actuales\n\n"
       },
       {
-        "imagen": "img.jpg",
+        "imagen": "tejido_guane.jpg",
         "descripcion": "Tejido guane encontrado en La Mesa de Los Santos, en Santander\n\n"
       }
     ]
@@ -113,7 +113,7 @@
     ],
     "imagenes": [
       {
-        "imagen": "img.jpg",
+        "imagen": "mapa_migraciones.png",
         "descripcion": "Migraciones humanas en haplogrupos mitocondriales.\n\n"
       }
     ]

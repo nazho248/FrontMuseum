@@ -36,38 +36,19 @@ export function TimeImages(props) {
 
             <div
                 className={"flex " + (props.ultimo ? "w-10/12" : "w-9/12") + " space-x-10 mb-10 mx-auto justify-center items-center"}>
-                <div className="flex w-1/2 justify-center items-center">
-                    <div className="border border-gray-200 rounded-lg shadow "
-                         style={{backgroundColor: "rgba(255,255,255,0.67)"}}>
-                        <img className="rounded-t-lg max-w-full" src="https://picsum.photos/1500/1000" alt=""/>
-                        <div className="p-2 pb-0 lg:p-5 lg:pb-5">
-                            <p className="mb-3 font-normal text-gray-700 text-xs lg:text-base">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-                                chronological order.
-                            </p>
+
+                {props.data.imagenes.map((imagen, index) => (
+                    <div className="flex w-1/2 justify-center items-center h-48" key={index}>
+                        <div className="border border-gray-200 rounded-lg shadow" style={{ backgroundColor: "rgba(255,255,255,0.67)", height: "100%" }}>
+                            <img className="rounded-t-lg w-full h-4/6 3 object-contain" src={"../../assets/img/Timeline/" + imagen.imagen} alt="" />
+                            <div className="p-2 pb-0 lg:p-5 lg:pb-5 h-2/6 overflow-hidden">
+                                <p className="mb-3 font-normal text-gray-700 text-xs lg:text-base">
+                                    {imagen.descripcion}
+                                </p>
+                            </div>
                         </div>
                     </div>
-
-
-                </div>
-                <div className="flex w-1/2 justify-center items-center">
-                    <div className="border border-gray-200 rounded-lg shadow "
-                         style={{backgroundColor: "rgba(255,255,255,0.67)"}}>
-                        <img className="rounded-t-lg max-w-full" src="https://picsum.photos/1500/1000" alt=""/>
-                        <div className="p-2 pb-0 lg:p-5 lg:pb-5">
-                            <p className="mb-3 font-normal text-gray-700 text-xs lg:text-base">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-                                chronological order.
-                            </p>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-
-
+                ))}
             </div>
 
 
