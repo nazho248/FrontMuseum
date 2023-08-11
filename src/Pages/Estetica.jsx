@@ -1,8 +1,10 @@
 import React, {Fragment} from "react";
-import { Link } from 'react-router-dom';
 import {BackBtn} from "../BackBtn";
 import {LeftSide} from "../components/estetica/LeftSide";
 import {RightSide} from "../components/estetica/RightSide";
+import {motion} from "framer-motion";
+import {useSwipeable} from "react-swipeable";
+import {useNavigate} from "react-router-dom";
 
 
 export function Estetica() {

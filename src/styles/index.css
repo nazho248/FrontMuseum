@@ -108,17 +108,16 @@ body#Home {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px) saturate(100%);
     transition: 0.5s;
-    color: darkred;
 }
 
  .overlay {
     position: fixed;
-    bottom: -100vh;
+    bottom: 0;
     left: 0;
     right: 0;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 25px;
     transition: .5s ease;
     object-fit: cover;
     opacity: 0;
@@ -126,9 +125,11 @@ body#Home {
 
  .bottom-navigation .col:hover .overlay {
     height: calc(83vh - 10%); /* Ajustar según sea necesario */
-    bottom: 0;
-    opacity: 1;
-}
+     bottom: 0;
+     opacity: 1;
+     overflow: hidden;
+ }
+
 
 /*MENU DESPLEGABLE  */
 
