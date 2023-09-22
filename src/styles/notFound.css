@@ -1,55 +1,62 @@
 #notfound h1 {
-    text-align:center;
-    Letter-spacing: 10px;
-    font-size: 1000%;
-    font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 1000%;
+  font-weight: bold;
 }
 
-#notfound p  {
-    text-align:center;
-    position: relative;
-    margin-top: -25px;
+#notfound p {
+  text-align: center;
+  position: relative;
+  margin-top: -25px;
 }
 
 body#notfound {
-    background: url("../../public/assets/img/canonautor.jpg") no-repeat center center fixed;
-    background-size: cover;
-    font-family: '', sans-serif;
-    Color: #fff;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+  background: url("../../public/assets/img/canonautor.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+  font-family: "", sans-serif;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
-#notfound #root{
-    height: 100%;
-    width: 100%;
+#notfound #root {
+  height: 100%;
+  width: 100%;
 }
 
 #notfound h2 {
-    font-family: 'Bookman Old Style';
-    font-size: 40px;
-    padding:20px;
+  font-family: "Bookman Old Style";
+  font-size: 40px;
+  padding: 20px;
 }
 
-#notfound .errorContent{
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+#notfound .errorContent {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @keyframes colorTransformAnimation {
-    0%, 100% { color: #ffffff; transform: scale(1); }
-    50% { color: #fb923c; transform: scale(1.05); }
+  0%,
+  100% {
+    color: #ffffff;
+    transform: scale(1);
+  }
+  50% {
+    color: #fb923c;
+    transform: scale(1.05);
+  }
 }
 
 /* Aplicar la animación a los elementos */
-#notfound .errorContent h1  {
-    animation: colorTransformAnimation 2s ease-in-out infinite;
+#notfound .errorContent h1 {
+  animation: colorTransformAnimation 2s ease-in-out infinite;
 }
-

@@ -1,19 +1,28 @@
 // App.js
-import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
-
-import './styles/App.css';
+import React, { StrictMode } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./styles/App.css";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+import OrientationChecker from "./OrientationChecker";
+import { LoadingScreen } from "./components/LoadingScreen";
+import { UseLoading } from "./hooks/UseLoading";
+import { useOrientation } from "./hooks/UseOrientation";
 
 //import fragments
 
+export const App = () => {
+  const { isLoaded, loading, setLoading, loadedImages } = UseLoading();
+  const forceRender = useOrientation();
+  return (
+    <Router>
+      <StrictMode>
+        <OrientationChecker key={forceRender}>
+          {!isLoaded && <LoadingScreen percentage={loading} />}
+          {isLoaded && <AnimatedRoutes loadedImages={loadedImages} />}
+        </OrientationChecker>
+      </StrictMode>
+    </Router>
+  );
+};
 
-export function App() {
-    //como llamar variables de entorno
-    /*<h3>{process.env.REACT_APP_IMAGE_BASE_URL}</h3>*/
-    return (
-        <Router>
-            <AnimatedRoutes/>
-        </Router>
-    );
-}
+export default React.memo(App);

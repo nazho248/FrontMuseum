@@ -1,5 +1,3 @@
 export function Login() {
-    return (
-        <></>
-    )
+  return <></>;
 }

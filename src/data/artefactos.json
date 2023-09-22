@@ -1,18 +1,17 @@
 {
-
   "0": {
-  "nombre": "C283",
-  "model": "C283.glb",
-  "descripcion": "Cuenco con decoración externa a modo de excisión, con borde invertido y labio redondeado, cuerpo semiesférico y base convexa.",
-  "img1": "283_01.png",
-  "alt1": "Cuenco con decoración excisa.",
-  "img2": "283_02.jpg",
-  "alt2": "Ilustración de la decoración excisa de calado",
-  "id": 0
-},
+    "nombre": "C283",
+    "model": "C283.glb",
+    "descripcion": "Cuenco con decoración externa a modo de excisión, con borde invertido y labio redondeado, cuerpo semiesférico y base convexa.",
+    "img1": "283_01.png",
+    "alt1": "Cuenco con decoración excisa.",
+    "img2": "283_02.jpg",
+    "alt2": "Ilustración de la decoración excisa de calado",
+    "id": 0
+  },
   "2": {
     "nombre": "C183",
-    "model": 0,
+    "model": "C183.glb",
     "descripcion": "Copa con borde evertido y labio biselado desde donde salen dos agarraderas y dos apliques, cuerpo elipsoide.",
     "img1": "183_01.jpg",
     "alt1": "Vista cara interna de la copa",
@@ -22,7 +21,7 @@
   },
   "1": {
     "nombre": "C217",
-    "model": 0,
+    "model": "C217.glb",
     "descripcion": "Copa de borde invertido y labio redondeado con decoración pintada externa e interna, presenta engobe. Tiene diseños geométricos en ambas superficies a dos colores: Crema y ocre.",
     "img1": "217_01.png",
     "alt1": "Copa con engobe",
@@ -53,7 +52,7 @@
   },
   "5": {
     "nombre": "C422",
-    "model": 0,
+    "model": "C422.glb",
     "descripcion": "Olla de labio plano y borde reforzado evertido, con dos asas. La olla tiene hombro curvo, cuerpo semiesférico y base convexa. Presenta huellas negras de uso producidas posiblemente por el fogon durante su vida útil. Su acabado es pulido.",
     "img1": "422_01.png",
     "alt1": "Olla con decoración incisa",
@@ -73,7 +72,7 @@
   },
   "7": {
     "nombre": "C565",
-    "model": 0,
+    "model": "C565.glb",
     "descripcion": "Olla con borde recto y labio biselado, cuello recto con dos asas a los costados y una quilla con decoración pintada e incisa. Hombro recto, cuerpo semiesférico y base conexa.",
     "img1": "565_01.png",
     "alt1": "Ilustración de la olla",
@@ -93,7 +92,7 @@
   },
   "9": {
     "nombre": "C600",
-    "model": 0,
+    "model": "C600.glb",
     "descripcion": "Jarra con borde reforzado externo y labio plano, cuello recto con una asa de argolla, hombro recto, cuerpo semiesférico y base plana. Tiene acabado pulido, engobe y decoración roja profusa con diseños geométricos.",
     "img1": "600_01.png",
     "alt1": "Jarra con decoración pintada.",
@@ -123,7 +122,7 @@
   },
   "12": {
     "nombre": "C893",
-    "model": 0,
+    "model": "C893.glb",
     "descripcion": "Olla con borde invertido y labio redondeado, hombro curvo desde donde salen dos asas, cuerpo esférico y base convexa. Sobre el hombro presenta decoración incisa con pintura blanca que conforma diseños geométricos. El acabado de la superficie es pulido",
     "img1": "893_01.png",
     "alt1": "Detalle de la decoración del hombro de la olla",
@@ -133,7 +132,7 @@
   },
   "13": {
     "nombre": "C916",
-    "model": 0,
+    "model": "C916.glb",
     "descripcion": "Olla con borde reforzado evertido y labio redondeado del cual se sostienen dos asas, su cuerpo es subglobular y con base convexa. Se evidencian trazas de pintura roja en la superficie externa que en pocos áreas develan el motivo geométrico original, pero dado al avanzado estado de deterioro en la mayoría de la vasija se desvaneció.",
     "img1": "916_01.png",
     "alt1": "Vista de la cara interna de la copa",
@@ -143,7 +142,7 @@
   },
   "14": {
     "nombre": "C943",
-    "model": 0,
+    "model": "C943.glb",
     "descripcion": "Olla de boca circular, borde reforzado externo, labio y cuello recto. Hombro curvo y cuerpo elipsoide con base plana. No tiene decoración aunque la superficie sí presenta huellas negras desde la base hasta el borde, posiblemente generadas por el uso.",
     "img1": "943_01.png",
     "alt1": "Olla",
@@ -153,7 +152,7 @@
   },
   "15": {
     "nombre": "C958",
-    "model": 0,
+    "model": "C958.glb",
     "descripcion": "Copa con borde invertido y labio recto, sobre el hombro salen dos agarraderas, cuerpo elipsoide. Tiene decoración pintada externa e interna, y su acabado es pulido. La vasija presenta una irregularidad en el soporte que le genera un desnivel marcado a la pieza.",
     "img1": "958_01.png",
     "alt1": "Copa con decoración interna y externa",

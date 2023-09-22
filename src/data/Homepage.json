@@ -1,4 +1,11 @@
 {
+  "0": {
+    "id": 1,
+    "title": "Estética",
+    "link": "/Estetica",
+    "imageSrc": "/assets/img/separata_estetica.jpg",
+    "alt": "Descripcion Imagen 1"
+  },
   "1": {
     "id": 2,
     "title": "Tiempo",

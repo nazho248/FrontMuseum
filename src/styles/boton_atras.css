@@ -1,48 +1,48 @@
 .back-button {
-    position: fixed;
-    top: 30px;
-    left: 20px;
-    z-index: 9999;
-    background-color: #8E0704;
-    padding: 15px 15px;
-    border: none;
-    border-radius: 500px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    transition: 0.3s; /* Reduce la duración de la transición */
-    display: flex; /* Agregamos display flex */
-    align-items: center; /* Centramos verticalmente el contenido */
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  z-index: 9999;
+  background-color: #8e0704;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 500px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.3s; /* Reduce la duración de la transición */
+  display: flex; /* Agregamos display flex */
+  align-items: center; /* Centramos verticalmente el contenido */
 }
 
 .arrow {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    transform: rotate(-45deg);
-    margin-right: 5px; /* Añadimos un margen derecho */
-    Z-index: 9999;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  transform: rotate(-45deg);
+  margin-right: 5px; /* Añadimos un margen derecho */
+  z-index: 9999;
 }
 
 /* Eliminamos .back-button:hover .arrow ya que no es necesario */
 
 .back-button:hover {
-    background-color: #740704;
-    transition: 0.5s; /* Reduce la duración de la transición */
+  background-color: #740704;
+  transition: 0.5s; /* Reduce la duración de la transición */
 }
 
 .back-button::after {
-    content: "Atrás";
-    color: transparent;
-    background-color: transparent;
-    font-size: 0;
-    transition: 0.5s; /* Reduce la duración de la transición */
-    border-radius: 500px;
+  content: "Atrás";
+  color: transparent;
+  background-color: transparent;
+  font-size: 0;
+  transition: 0.5s; /* Reduce la duración de la transición */
+  border-radius: 500px;
 }
 
 .back-button:hover::after {
-    font-size: 17px;
-    color: white;
-    margin-left: 5px; /* Agregamos un margen izquierdo */
+  font-size: 17px;
+  color: white;
+  margin-left: 5px; /* Agregamos un margen izquierdo */
 }
