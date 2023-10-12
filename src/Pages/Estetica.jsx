@@ -1,13 +1,13 @@
-import React, { Fragment } from "react";
-import { BackBtn } from "../BackBtn";
-import { LeftSide } from "../components/estetica/LeftSide";
-import { RightSide } from "../components/estetica/RightSide";
-import { motion } from "framer-motion";
-import { useSwipeable } from "react-swipeable";
-import { useNavigate } from "react-router-dom";
+import React, { Fragment } from 'react'
+import { BackBtn } from '../BackBtn'
+import { LeftSide } from '../components/estetica/LeftSide'
+import { RightSide } from '../components/estetica/RightSide'
+import { motion } from 'framer-motion'
+import { useSwipeable } from 'react-swipeable'
+import { useNavigate } from 'react-router-dom'
 
 export function Estetica() {
-  document.body.id = "";
+  document.body.id = ''
 
   return (
     <Fragment>
@@ -17,5 +17,5 @@ export function Estetica() {
         <RightSide />
       </div>
     </Fragment>
-  );
+  )
 }

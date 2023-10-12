@@ -33,7 +33,7 @@
 }
 
 .back-button::after {
-  content: "Atrás";
+  content: 'Atrás';
   color: transparent;
   background-color: transparent;
   font-size: 0;

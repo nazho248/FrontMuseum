@@ -1,22 +1,22 @@
-import { Fragment, useState } from "react";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import { motion } from "framer-motion";
+import { Fragment, useState } from 'react'
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
+import { motion } from 'framer-motion'
 
 export function Right_Nav({ setCurrentImage, images }) {
-  const [showThumbmails, setShowThumbmails] = useState(true);
+  const [showThumbmails, setShowThumbmails] = useState(true)
 
   const handleExpandImagesBtnClick = () => {
-    setShowThumbmails((prevShowThumbmails) => !prevShowThumbmails);
+    setShowThumbmails(prevShowThumbmails => !prevShowThumbmails)
     //ponerle a body la clase hide-thumbnails
     if (showThumbmails) {
-      document.body.classList.add("hide-thumbnails");
+      document.body.classList.add('hide-thumbnails')
     } else {
-      document.body.classList.remove("hide-thumbnails");
+      document.body.classList.remove('hide-thumbnails')
     }
-  };
-  const handleThumbnailClick = (imageId) => {
-    setCurrentImage(imageId);
-  };
+  }
+  const handleThumbnailClick = imageId => {
+    setCurrentImage(imageId)
+  }
 
   return (
     <Fragment>
@@ -38,7 +38,8 @@ export function Right_Nav({ setCurrentImage, images }) {
         <div className="thumbnails-container">
           {images.map((image, index) => (
             <img
-              src={"assets/img/galeria/" + image.imgsrc}
+              key={image.id}
+              src={'assets/img/galeria/thumbs/' + image.imgsrc}
               alt="Thumbnail 1"
               onClick={() => handleThumbnailClick(image.id)}
             />
@@ -48,5 +49,5 @@ export function Right_Nav({ setCurrentImage, images }) {
         </div>
       </div>
     </Fragment>
-  );
+  )
 }

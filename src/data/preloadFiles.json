@@ -1,13 +1,14 @@
 {
   "images": {
     "position": "/assets/img/",
-    "list": [
-      "arqueologia.jpg",
-      "border-smooth.png",
-      "canonautor.jpg",
-      "pattern.png"
+    "list": ["arqueologia.jpg", "border-smooth.png", "canonautor.jpg", "pattern.png",
+      "galeria/thumbs/Grethel_Florez-Sierra-Capas_concentricas-Colombiana.jpeg",
+      "galeria/thumbs/Grethel_Flórez-Sierra-Radiación-Colombiana.jpeg",
+      "galeria/thumbs/pieza_guane_4_indigena_con_las_hormigas.jpg",
+      "galeria/thumbs/piezas_guane_1_caldero.jpg",
+      "galeria/thumbs/piezas_guanes_2_casa_e_indigena.jpg",
+      "galeria/thumbs/piezas_guanes_3_bodegon_peses_ormigas_ollas_etc.jpg"
+
     ]
   }
 }
-
-

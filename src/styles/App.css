@@ -34,3 +34,12 @@ body {
   overflow: hidden;
   scroll-behavior: smooth;
 }
+
+/*botón con aria content= "Minimize image" */
+[data-rmiz-btn-unzoom] {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  z-index: 999;
+}
+[data-rmiz-modal-overlay='visible'] {
+  background-color: rgb(255, 255, 255) !important;
+}

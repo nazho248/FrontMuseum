@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react'
 export function LeftSide() {
   return (
-    <div className="relative flex flex-col h-screen w-4/12 m-0">
+    <div className="relative m-0 flex h-screen w-4/12 flex-col">
       {/*Fondo de patrón en imagen blanca*/}
       <div
-        className="h-4/6 bg-gradient-to-r from-white to-gray-600 bg-pattern bg-cover bg-center"
+        className="bg-pattern h-4/6 bg-gradient-to-r from-white to-gray-600 bg-cover bg-center"
         style={{
           backgroundImage: "url('assets/img/pattern.png')",
-          filter: "brightness(1000%)",
-          backgroundSize: "300%",
+          filter: 'brightness(1000%)',
+          backgroundSize: '300%',
         }}
       ></div>
 
-      <div className="h-2/6 bg-slate-900 flex justify-center items-center">
+      <div className="flex h-2/6 items-center justify-center bg-slate-900">
         <img
-          className="aspect-square h-3/4 hover:transform hover:scale-110 transition duration-300 ease-in-out1
+          className="ease-in-out1 aspect-square h-3/4 transition duration-300 hover:scale-110 hover:transform
                 "
           src="assets/img/qr-white.png"
           alt="Codigo_QR"
         />
       </div>
     </div>
-  );
+  )
 }

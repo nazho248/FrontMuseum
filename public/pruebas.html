@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    var params = location.href.split("?")[1].split("&");
+    data = {};
+    for (x in params) {
+      data[params[x].split("=")[0]] = params[x].split("=")[1];
+    }
+    let entidad = document.getElementById("prueba");
+    console.log("owo: "+entidad);
+  </script>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+<p id="prueba">owo</p>
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: true"
+         ARjs.Context.baseURL="https://jeromeetienne.github.io/AR.js/three.js/">
+  <a-marker preset="hiro">
+    <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+    <a-entity
+      id="entidad"
+      position="0 0 0"
+      scale="10 10 10"
+      gltf-model="assets/models/C422.glb"
+    ></a-entity>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
+
+
+</body>
+</html>

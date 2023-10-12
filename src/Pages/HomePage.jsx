@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Home } from "../components/index/Home";
-import { ModalInfo } from "../components/ModalInfo";
-import { motion } from "framer-motion";
-import { LoadingScreen } from "../components/LoadingScreen";
+import React, { useState, useEffect } from 'react'
+import { Home } from '../components/index/Home'
+import { ModalInfo } from '../components/ModalInfo'
+import { motion } from 'framer-motion'
+import { LoadingScreen } from '../components/LoadingScreen'
 
 export function HomePage(props) {
-  const indexCards = Object.values(require("../data/Homepage.json"));
+  const indexCards = Object.values(require('../data/Homepage.json'))
 
-  document.title = "Bienvenido";
-  document.body.id = "Home";
+  document.title = 'Bienvenido'
+  document.body.id = 'Home'
 
   return (
     <div>
@@ -30,7 +30,7 @@ export function HomePage(props) {
         <ModalInfo />
       </motion.div>
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage
