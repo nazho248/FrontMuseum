@@ -29,18 +29,20 @@ export const RemoveTrailingSlash = ({ ...rest }) => {
 
 function AnimatedRoutes(props) {
   const location = useLocation()
-  const tiempoRegex = /^(text|img)$/
+  //const tiempoRegex = /^(text|img)$/
   return (
     <AnimatePresence>
       <RemoveTrailingSlash />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage loadedImages={props.loadedImages} />} />
         <Route path="/index" element={<HomePage loadedImages={props.loadedImages} />} />
-        <Route path="/Estetica" element={<Estetica />} />
 
-        <Route path="/Tiempo/:year/:type" element={<Tiempo />} />
-        <Route path="/Tiempo/:year" element={<Tiempo />} />
-        <Route path="/Tiempo" element={<Tiempo />} />
+        <Route path="/Estetica" element={<Estetica />} />
+        <Route path="/Estetica/:id" element={<Estetica />} />
+
+        <Route path="/Tiempo/:year/:type" element={<Tiempo key_bg={0} />} />
+        <Route path="/Tiempo/:year" element={<Tiempo key_bg={0} />} />
+        <Route path="/Tiempo" element={<Tiempo key_bg={0} />} />
 
         <Route path="/Artefacto/:id" element={<Artefacto />} />
         <Route path="/Artefacto/:id" element={<Artefacto />} />

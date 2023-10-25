@@ -1,7 +1,7 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { BackBtn } from '../BackBtn'
-import { Main_Image } from '../components/galeria/Main_Image'
-import { Right_Nav } from '../components/galeria/Right_Nav'
+import { MainImage } from '../components/galeria/MainImage'
+import { RightNav } from '../components/galeria/RightNav'
 
 export function Galeria() {
   const data_galery = Object.values(require('../data/galery.json'))
@@ -11,8 +11,8 @@ export function Galeria() {
     <Fragment>
       <BackBtn />
       <div className="gallery bg-slate-800">
-        <Main_Image currentImage={data_galery[currentImage]} setCurrentImage={setCurrentImage} />
-        <Right_Nav setCurrentImage={setCurrentImage} images={data_galery} />
+        <MainImage currentImage={data_galery[currentImage]} setCurrentImage={setCurrentImage} />
+        <RightNav setCurrentImage={setCurrentImage} images={data_galery} />
       </div>
     </Fragment>
   )

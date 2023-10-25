@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { BottomLinks } from './BottomLinks'
 import { ButtonModal } from '../ButtonModal'
-import { ModalInfo } from '../ModalInfo'
 
 export function Home({ bottomrows, images }) {
   return (

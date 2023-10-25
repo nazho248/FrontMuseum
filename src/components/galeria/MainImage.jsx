@@ -1,11 +1,10 @@
 import { BiInfoCircle } from 'react-icons/bi'
-import React, { useEffect, useState } from 'react'
-import { motion, useAnimationControls } from 'framer-motion'
+import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-export function Main_Image({ currentImage, setCurrentImage }) {
+export function MainImage({ currentImage, setCurrentImage }) {
   const [isTextHidden, setTextHidden] = useState(true)
-  const controls = useAnimationControls()
 
   const handleInfoCircleClick = () => {
     setTextHidden(prevTextHidden => !prevTextHidden)
@@ -14,39 +13,37 @@ export function Main_Image({ currentImage, setCurrentImage }) {
   const variants = {
     show: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         ease: 'easeOut',
-        duration: 0.3,
+        duration: 0.5,
       },
     },
     hide: {
-      x: '100vw',
+      y: 1000,
       opacity: 0,
     },
     exit: {
       opacity: 0,
-      y: 2000,
+      y: -1000,
       transition: {
         ease: 'easeOut',
-        duration: 0.3,
+        duration: 0.5,
       },
     },
   }
 
-  useEffect(() => {
-    console.log('owo')
-  }, [currentImage, controls])
-
   return (
     <div className="main-image">
-      <motion.div key={currentImage.id} variants={variants} animate={'show'} initial={'hide'} exit={'exit'}>
-        <LazyLoadImage
-          src={'assets/img/galeria/' + currentImage.imgsrc}
-          placeholderSrc={'assets/img/galeria/thumbs/' + currentImage.imgsrc}
-          alt="Main Image"
-        />
-      </motion.div>
+      <AnimatePresence mode="popLayout">
+        <motion.div key={currentImage.id} variants={variants} animate={'show'} initial={'hide'} exit={'exit'}>
+          <LazyLoadImage
+            src={'assets/img/galeria/' + currentImage.imgsrc}
+            placeholderSrc={'assets/img/galeria/thumbs/' + currentImage.imgsrc}
+            alt="Main Image"
+          />
+        </motion.div>
+      </AnimatePresence>
       <motion.div
         className="info-floating scale-75 transform lg:scale-100"
         onClick={handleInfoCircleClick}

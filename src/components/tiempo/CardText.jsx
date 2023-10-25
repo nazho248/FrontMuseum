@@ -1,4 +1,4 @@
-import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
@@ -6,10 +6,11 @@ export function CardText(props) {
   const navigate = useNavigate()
 
   let atrasredirect = '/Tiempo'
-  if (props.anterior != -1) {
+  if (props.anterior !== -1) {
     atrasredirect = '/Tiempo/' + props.anterior + '/images'
   }
   const siguiente = '/Tiempo/' + props.data.epoca + '/images'
+  const texto = props.data.textos[0].texto
 
   return (
     <div className="bottom-0 flex h-full w-screen flex-row   items-center  justify-center text-center text-black">
@@ -19,7 +20,7 @@ export function CardText(props) {
 
       {/*flecha izquierda <- */}
       <motion.div
-        className="mb-14 mt-4 flex w-14 cursor-pointer border-b-2 border-slate-50 text-white  lg:border-b-4"
+        className="cursor-pointer text-white"
         onClick={() => {
           navigate(siguiente)
         }}
@@ -32,7 +33,7 @@ export function CardText(props) {
           ease: 'easeInOut',
         }}
       >
-        <SlArrowLeft className="absolute -translate-x-3 -translate-y-4 transform text-4xl lg:-translate-x-4 lg:-translate-y-7 lg:text-6xl" />
+        <BsArrowLeft className="text-4xl lg:text-6xl" />
       </motion.div>
 
       {/*contenido*/}
@@ -40,12 +41,13 @@ export function CardText(props) {
         <h1 className="mb-2 w-full whitespace-pre-line text-sm font-bold lg:mb-10 lg:text-2xl">
           {props.data.textos[0].titulo}
         </h1>
-        <p className="text-justify text-xs lg:text-sm">{props.data.textos[0].texto}</p>
+        {/*imprimir los /n como saltos de linea*/}
+        <p className="whitespace-pre-line text-justify text-xs lg:text-xl">{texto}</p>
       </div>
 
       {/*flecha derecha ->*/}
       <motion.div
-        className="mb-14 mt-4 flex w-14 cursor-pointer border-b-2  border-slate-50 text-white lg:border-b-4"
+        className="cursor-pointer text-white"
         onClick={() => {
           navigate(atrasredirect)
         }}
@@ -58,7 +60,7 @@ export function CardText(props) {
           ease: 'easeInOut',
         }}
       >
-        <SlArrowRight className="absolute -translate-y-4 translate-x-8  transform text-4xl lg:text-6xl" />
+        <BsArrowRight className=" text-4xl lg:text-6xl" />
       </motion.div>
     </div>
   )

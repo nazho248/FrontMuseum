@@ -1,13 +1,16 @@
 import { Fragment } from 'react'
 
 export function TopTime(props) {
+  console.log(props)
   return (
     <div
       className="timeline-ruler flex h-7 w-full border-b-2  border-slate-50  lg:h-10 "
       style={{ background: 'rgba(209,168,134,0.4)' }}
     >
-      <div className={'flex w-1/4 border-r-2 border-slate-50 lg:border-r-4 ' + (props.isPresentation ? 'h-7' : 'h-10')}>
-        <div className="h-5 w-1/5 border-x-2 border-slate-50" style={{ borderWidth: '0 1px 0 0' }}></div>
+      <div
+        className={'flex w-1/4 border-r-2 border-slate-50 ' + (props.isPresentation ? 'h-7 lg:h-10' : 'h-10 lg:h-14')}
+      >
+        <div className="h-5 w-1/5 border-r-2 border-slate-50" style={{ borderWidth: '0 1px 0 0' }}></div>
         <div className="h-5 w-1/5 border-r-2 border-slate-50" style={{ borderWidth: '0 1px 0 0' }}></div>
         <div className="h-5 w-1/5 border-r-2 border-slate-50" style={{ borderWidth: '0 1px 0 0' }}></div>
         <div className="h-5 w-1/5 border-r-2 border-slate-50" style={{ borderWidth: '0 1px 0 0' }}></div>
@@ -27,7 +30,7 @@ export function TopTime(props) {
             {props.fecha}
           </div>
         ) : (
-          <div className="Date relative top-10 -translate-x-5 transform text-sm text-white lg:top-14">
+          <div className="Date relative top-10 -translate-x-5 transform text-base text-white lg:top-14">
             {props.fechaAnterior}
           </div>
         )}

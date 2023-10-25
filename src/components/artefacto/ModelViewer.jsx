@@ -117,7 +117,7 @@ export function ModelViewer(artefacto) {
         UDES {artefacto.artefacto.nombre}
       </h1>
       <div id="Model1" className="h-full w-10/12 rounded-lg bg-white lg:h-4/6 ">
-        {modelUrl == 0 ? (
+        {modelUrl === 0 ? (
           <img
             className={'rounded-lg'}
             src={'/assets/img/artefactos/Frontal/' + artefacto.artefacto.nombre + '.jpg'}

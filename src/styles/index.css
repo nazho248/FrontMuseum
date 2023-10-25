@@ -15,6 +15,11 @@ body#Home {
   background-size: cover;
 }
 
+body#estetica, body#Tiempo{
+  background-color: #000000;
+}
+
+
 #Home a {
   text-decoration: none;
   color: #ffffff;

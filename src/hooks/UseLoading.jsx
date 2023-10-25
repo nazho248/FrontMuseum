@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import preloadFiles from '../data/preloadFiles.json'
 
-export function UseLoading() {
+export function UseLoading(factory, deps) {
   const [isLoaded, setIsLoaded] = useState(false)
   const [loading, setLoading] = useState(0)
   const [loadedImages] = useState([])
@@ -23,11 +23,9 @@ export function UseLoading() {
 
     data.push(...items_adicionales)
 
-    console.log('solo una vez C:')
     return data
   }, [])
-
-  let imagenes_background = useMemo(() => {
+  useMemo(() => {
     //items a precargar en segundo plano
     const ArtefactosImg = Object.values(require('../data/artefactos.json'))
 
@@ -36,8 +34,8 @@ export function UseLoading() {
       return [item.img1, item.img2]
     })
     return imagenes_extra.flat()
-  })
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps)
   useEffect(() => {
     const imageLoad = imagenes_precarga.map(url => {
       return new Promise((resolve, reject) => {
@@ -50,8 +48,9 @@ export function UseLoading() {
         img.onerror = () => {
           //todo quitar cuando se suba a produccion
           reject(new Error(`No se pudo cargar la imagen: ${url}`))
+          //si no encuentra la imagen igual agregarla como si hubiera cargado
           setLoading(loading => loading + 100 / imagenes_precarga.length)
-          console.log('error con la imagen: ', url)
+          console.log('error al cargar: ', url)
           resolve()
         }
       })
@@ -61,7 +60,7 @@ export function UseLoading() {
       setLoading(100)
       setIsLoaded(true)
     })
-  }, [])
+  }, [imagenes_precarga])
 
   return { isLoaded, loading, setLoading, loadedImages }
 }

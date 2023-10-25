@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 export function Content(artefacto) {
   const [image1loaded, setImage1Loaded] = useState(false)
-  const [image2loaded, setImage2Loaded] = useState(false)
 
   let src1 = '../assets/img/artefactos/' + artefacto.artefacto.img1
   let src2 = '../assets/img/artefactos/' + artefacto.artefacto.img2

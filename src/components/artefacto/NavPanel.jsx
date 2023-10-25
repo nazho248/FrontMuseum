@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 export function NavPanel(artefactos) {
   const { id } = useParams()
   let url_path = ''
-  if (id != undefined) {
+  if (id !== undefined) {
     url_path = '../'
   }
 

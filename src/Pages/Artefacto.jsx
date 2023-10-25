@@ -4,9 +4,8 @@ import { ModelViewer } from '../components/artefacto/ModelViewer'
 import { Content } from '../components/artefacto/Content'
 import { NavPanel } from '../components/artefacto/NavPanel'
 import { motion } from 'framer-motion'
-import { useParams, redirect } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { ArtefactPresentation } from '../components/artefacto/ArtefactPresentation'
-import artefactos from '../data/artefactos.json'
 import { NotFound } from './NotFound'
 
 export function Artefacto() {
@@ -22,11 +21,11 @@ export function Artefacto() {
   console.log('id: ', id)
 
   const [isLoaded, setIsLoaded] = useState(false)
-
   const [change, setChange] = useState(false)
 
   useEffect(() => {
     // Simulamos un retraso de 1 segundo para cargar los recursos (ajusta según tus necesidades)
+    //esto para que se cargue el recurso antes de mostrarlo y que la aniamcion se pueda visualizar
     const loadingDelay = setTimeout(() => {
       setIsLoaded(true)
     }, 500)
@@ -47,7 +46,6 @@ export function Artefacto() {
         className="flex h-screen min-h-screen"
         initial={{ y: -500, opacity: 0 }}
         animate={{ y: isLoaded ? 0 : -1000, opacity: isLoaded ? 1 : 0 }}
-        exitBeforeEnter={{ y: 500, opacity: 0 }}
         transition={{
           duration: 1,
           type: 'spring',

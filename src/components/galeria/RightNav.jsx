@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 import { motion } from 'framer-motion'
 
-export function Right_Nav({ setCurrentImage, images }) {
+export function RightNav({ setCurrentImage, images }) {
   const [showThumbmails, setShowThumbmails] = useState(true)
 
   const handleExpandImagesBtnClick = () => {

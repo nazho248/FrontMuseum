@@ -37,12 +37,29 @@
   color: transparent;
   background-color: transparent;
   font-size: 0;
-  transition: 0.5s; /* Reduce la duración de la transición */
+  /* Reduce la duración de la transición */
+  transition: 0.5s;
   border-radius: 500px;
 }
 
+/*si el tamaño es menor que 800px*/
+@media (max-width: 900px) {
+  .back-button:hover::after {
+    font-size: 0.7rem !important;
+    margin-left: 0 !important;
+  }
+
+  .arrow {
+    width: 7px;
+    height: 7px;
+  }
+  .back-button {
+    padding: 13px 10px;
+  }
+}
+
 .back-button:hover::after {
-  font-size: 17px;
+  font-size: 0.8rem;
   color: white;
   margin-left: 5px; /* Agregamos un margen izquierdo */
 }
