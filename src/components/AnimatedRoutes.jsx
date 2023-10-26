@@ -8,6 +8,7 @@ import HomePage from '../Pages/HomePage'
 import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 import ArgumentedReality from '../Pages/ArgumentedReality'
+import Pruebas from '../Pruebas/Pruebas'
 
 export const RemoveTrailingSlash = ({ ...rest }) => {
   const location = useLocation()
@@ -53,6 +54,7 @@ function AnimatedRoutes(props) {
         {/* 404 page */}
         <Route path="*" element={<NotFound />} />
         <Route path="/404" element={<NotFound />} />
+        <Route path="/pruebas" element={<Pruebas />} />
       </Routes>
     </AnimatePresence>
   )

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -124,7 +124,9 @@ export function ModelViewer(artefacto) {
             alt={artefacto.artefacto.nombre}
           />
         ) : (
-          <canvas id="myThreeJsCanvas" className="rounded-lg"></canvas>
+          <Suspense fallback={<div>Loading...</div>}>
+            <canvas id="myThreeJsCanvas" className="rounded-lg"></canvas>
+          </Suspense>
         )}
       </div>
       <p

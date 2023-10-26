@@ -79,4 +79,6 @@ Estoy usando librerias y repositorios como:
 
 <ul>
 <li><a href="https://jsfiddle.net/lachlan/r8qWV/"> Generador Codigos QR</li>
+<li> <a href="https://www.youtube.com/watch?v=neT7fmZ6sDE">Como activar HTTP en React local para Testeo</a> </li>
 </ul>
+

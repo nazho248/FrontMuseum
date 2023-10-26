@@ -17,7 +17,7 @@ export default function OrientationChecker({ children }) {
 
   function checkOrientation() {
     if (window.innerHeight > window.innerWidth) {
-      setIsPortrait(true)
+      setIsPortrait(false)
     } else {
       setIsPortrait(false)
     }
