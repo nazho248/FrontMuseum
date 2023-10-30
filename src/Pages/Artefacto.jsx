@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { useParams } from 'react-router-dom'
 import { ArtefactPresentation } from '../components/artefacto/ArtefactPresentation'
 import { NotFound } from './NotFound'
+import { ModelViewerUPT } from '../components/artefacto/ModelViewerUPT'
 
 export function Artefacto() {
   document.title = 'Artefacto'
@@ -57,7 +58,7 @@ export function Artefacto() {
         {/*si el id esta entre los elements de artefactos*/}
         {id !== undefined && (
           <Fragment>
-            {isLoaded && <ModelViewer artefacto={artefacto} change={change} setChange={setChange} />}
+            {isLoaded && <ModelViewerUPT artefacto={artefacto} change={change} setChange={setChange} />}
             {isLoaded && <Content artefacto={artefacto} />}
           </Fragment>
         )}

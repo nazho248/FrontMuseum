@@ -18,7 +18,7 @@ export function ArtefactPresentation() {
         Navega Entre Nuestra <br /> Muestra Virtual
       </div>
       <motion.div
-        className="absolute bottom-0 left-1/3 mb-5 lg:mb-20"
+        className="absolute bottom-0 left-1/3 mb-10 lg:mb-32"
         animate={{ scale: [1, 1.1, 1] }}
         whileHover={{
           scale: 1.2,
@@ -40,6 +40,11 @@ export function ArtefactPresentation() {
           </button>
         </a>
       </motion.div>
+
+      {/*<p className={'absolute  bottom-0 bg-slate-900/60 p-4 text-center text-xl text-white lg:text-xl'}>
+        Encontrarás 17 piezas de la cultura Guane de la reserva UDES. Estas piezas han sido estudiadas desde el área de
+        antropología
+      </p>*/}
     </div>
   )
 }
