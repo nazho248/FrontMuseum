@@ -13,15 +13,21 @@ export const HitXR = ({ model }) => {
 
   useThree(({ camera }) => {
     if (!isPresenting) {
+      camera.position.set(0, 1, 0)
       camera.position.z = 3
+      camera.updateProjectionMatrix()
     }
   })
 
   useHitTest((hitMatrix, hit) => {
-    hitMatrix.decompose(reticleRef.current.position, reticleRef.current.quaternion, reticleRef.current.scale)
-    hitMatrix.decompose(cubeHandler.current.position, cubeHandler.current.quaternion, cubeHandler.current.scale)
-    reticleRef.current.rotation.set(-Math.PI / 2, 0, 0)
-    cubeHandler.current.rotation.set(-Math.PI / 2, 0, 0)
+    try {
+      hitMatrix.decompose(reticleRef.current.position, reticleRef.current.quaternion, reticleRef.current.scale)
+      hitMatrix.decompose(cubeHandler.current.position, cubeHandler.current.quaternion, cubeHandler.current.scale)
+      reticleRef.current.rotation.set(-Math.PI / 2, 0, 0)
+      cubeHandler.current.rotation.set(-Math.PI / 2, 0, 0)
+    } catch (e) {
+      console.log(e)
+    }
   })
 
   const placeModel = e => {
@@ -36,7 +42,6 @@ export const HitXR = ({ model }) => {
         enableDamping={true}
         dampingFactor={0.25}
         minDistance={1}
-        maxDistance={6}
         maxPolarAngle={Math.PI / 1.85}
         minPolarAngle={0}
       />
@@ -47,8 +52,8 @@ export const HitXR = ({ model }) => {
         })}
       {isPresenting && (
         <Fragment>
-          <mesh ref={reticleRef} rotation-x={-Math.PI / 2}>
-            <ringGeometry args={[0.14, 0.15, 16]} />
+          <mesh ref={reticleRef} rotation-x={-Math.PI / 2} visible={true}>
+            <ringGeometry args={[0.14, 0.15, 16]} position={[0, 0, 0]} />
             <meshBasicMaterial color={'white'} side={2} />
           </mesh>
 
@@ -62,7 +67,7 @@ export const HitXR = ({ model }) => {
       )}
 
       {/*modelo con posicion centrada*/}
-      {!isPresenting && <Model model={model} scale={[6, 6, 6]} rotate={true} />}
+      {!isPresenting && <Model model={model} scale={[6, 6, 6]} rotate={true} position={[0, 0, 0]} />}
     </Fragment>
   )
 }

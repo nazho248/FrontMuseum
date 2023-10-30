@@ -41,11 +41,6 @@ const CubeContainer = ({ model }) => {
     setInit(true)
   }
 
-  //al cambiar el estado del XR
-  useEffect(() => {
-    console.log('XR off/on')
-  }, [session])
-
   return (
     <Fragment>
       <Canvas camera={{ position: [0, 1, 0], fov: 20 }} width={window.innerWidth} height={window.innerHeight}>
@@ -70,7 +65,10 @@ const CubeContainer = ({ model }) => {
             className="    z-50 cursor-pointer     lg:text-6xl "
             style={{ zIndex: 99999 }}
           >
-            <TbAugmentedRealityOff className={'absolute bottom-4 right-4 rounded-md bg-white p-3 text-5xl'} />
+            <TbAugmentedRealityOff
+              className={'absolute bottom-4 right-4 rounded-md bg-white p-3 text-5xl'}
+              style={{ zIndex: 99999 }}
+            />
           </button>
         ))}
     </Fragment>
