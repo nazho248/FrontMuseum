@@ -18,6 +18,8 @@ const InterfaceAR = forwardRef(({ init, setInit }, ref) => {
       //ocultar motionref poniendolo hidden
       //asegurar por estilos que este oculto
       motionref.current.style.opacity = 0
+      motionref.current.style.visibility = 'hidden'
+      motionref.current.style.pointerEvents = 'none'
     }, 7000)
   }
 

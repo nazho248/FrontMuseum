@@ -1,36 +1,62 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { BackBtn } from '../BackBtn'
 import { LeftSide } from '../components/estetica/LeftSide'
 import { RightSide } from '../components/estetica/RightSide'
 import { motion } from 'framer-motion'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { NotFound } from './NotFound'
 import { EsteticaPresentation } from '../components/estetica/EsteticaPresentation'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { useSwipeable } from 'react-swipeable'
 
 export function Estetica() {
+  const navigate = useNavigate()
   document.body.id = 'estetica'
   document.title = 'Estética'
-  //leer archivo json
-  const estetica = require('../data/estetica.json')
-  //convertir json a array
-  const estetica_array = Object.values(estetica)
-  //el id es el nombre del artefacto de la URI
-  const { id } = useParams()
+  const estetica = require('../data/estetica.json') //leer archivo json
+  const estetica_array = Object.values(estetica) //convertir json a array
+  const { id } = useParams() //el id es el nombre del artefacto de la URI
 
   //buscar entre los artefactos el que tenga el nombre que se pasa por parametro
   const artefacto_desc = estetica_array.find(estetica => estetica.nombre === id)
-  //si no se encuentra el artefacto
+  const [color, setColor] = React.useState('gray')
+  //arreglo con los colores para luego elegir aleatoriamente
+  /*    const colores = ['gray', 'yellow', 'salmon', 'turquoise']
+    color = colores [Math.floor(Math.random() * colores.length)]*/
+  const colores = ['gray', 'yellow', 'salmon', 'turquoise']
+
+  //cambiar el color cada que se cambia de id (link)
+  useEffect(() => {
+    setColor(colores[Math.floor(Math.random() * colores.length)])
+  }, [id])
+  console.log(id)
+
+  const handlers = useSwipeable({
+    onSwiped: eventData => {
+      if (eventData.dir === 'Left') {
+        console.log('izq')
+        if (artefacto_index !== estetica_array.length - 1) {
+          navigate('/Estetica/' + estetica_array[artefacto_index + 1].nombre)
+        }
+      } else if (eventData.dir === 'Right') {
+        console.log('der')
+        if (artefacto_index !== 0 && id !== undefined) {
+          navigate('/Estetica/' + estetica_array[artefacto_index - 1].nombre)
+        } else {
+          navigate('/Estetica')
+        }
+      }
+    },
+  })
 
   if (artefacto_desc === undefined && id !== undefined) {
     return <NotFound />
   }
   //en que # de artefacto estoy?
   const artefacto_index = estetica_array.findIndex(estetica => estetica.nombre === id)
-  console.log('artefacto_index: ', artefacto_index)
 
   return (
-    <Fragment>
+    <div {...handlers}>
       <BackBtn />
       <motion.div
         className="max-w-screen flex h-screen max-h-screen min-h-screen overflow-hidden"
@@ -45,13 +71,14 @@ export function Estetica() {
         {/*si el id esta entre los elements de artefactos*/}
         {id !== undefined && (
           <Fragment>
-            <LeftSide artefacto_desc={artefacto_desc} />
-            <RightSide artefacto_desc={artefacto_desc} />
+            <LeftSide color={color} />
+            <RightSide artefacto_desc={artefacto_desc} color={color} />
           </Fragment>
         )}
 
         {/*si el index es el primero (0), imprimir que el link es solo /estetica, si no imprimir el link con el nombre del artefacto anterior*/}
 
+        {/*flecha a la izquierda*/}
         {artefacto_index !== -1 && (
           <Link
             to={artefacto_index === 0 ? '/Estetica' : '/Estetica/' + estetica_array[artefacto_index - 1].nombre}
@@ -71,6 +98,6 @@ export function Estetica() {
           </Link>
         )}
       </motion.div>
-    </Fragment>
+    </div>
   )
 }
