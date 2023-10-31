@@ -8,7 +8,7 @@ import HomePage from '../Pages/HomePage'
 import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 import ArgumentedReality from '../Pages/ArgumentedReality'
-import Pruebas from '../Pruebas/Pruebas'
+import Pruebas from '../AR/Pruebas'
 
 export const RemoveTrailingSlash = ({ ...rest }) => {
   const location = useLocation()

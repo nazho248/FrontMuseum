@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useRef } from 'react'
-import CubeContainer from '../../Pruebas/CubeContainer'
+import CubeContainer from '../../AR/CubeContainer'
 import { ImSpinner9 } from 'react-icons/im'
 /*import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'

@@ -45,7 +45,7 @@ export const HitXR = ({ model }) => {
         maxPolarAngle={Math.PI / 1.85}
         minPolarAngle={0}
       />
-      <ambientLight color={'0xffffff'} intensity={1} castShadow={false} />
+      <ambientLight color={'white'} intensity={0.8} castShadow={false} />
       {isPresenting &&
         models.map(({ position, id }) => {
           return <Model key={id} position={position} model={model} scale={[1, 1, 1]} rotate={false} />
