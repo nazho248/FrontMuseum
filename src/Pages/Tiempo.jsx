@@ -107,10 +107,10 @@ export function Tiempo() {
       <motion.div
         className="h-screen bg-cover bg-fixed bg-center"
         style={estilo_fondo}
-        initial={{ opacity: 0, y: 1000 }}
+        /*        initial={{ opacity: 0, y: 1000 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.5 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.5 }}*/
       ></motion.div>
       {/*motion div de la imagen de fondo*/}
 

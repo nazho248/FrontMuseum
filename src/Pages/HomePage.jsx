@@ -1,13 +1,13 @@
 import { Home } from '../components/index/Home'
 import { ModalInfo } from '../components/ModalInfo'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
-export function HomePage(props) {
+export function HomePage({ loadedImages }) {
   const indexCards = Object.values(require('../data/Homepage.json'))
 
   document.title = 'Bienvenido'
   document.body.id = 'Home'
-
   return (
     <div>
       {/* Utiliza AnimatePresence para manejar las animaciones de entrada y salida */}
@@ -22,7 +22,7 @@ export function HomePage(props) {
         transition={{ duration: 0.5, delay: 0.8 }}
       >
         {/* Contenido principal */}
-        <Home bottomrows={indexCards} images={props.loadedImages} />
+        <Home bottomrows={indexCards} images={loadedImages} />
 
         <ModalInfo />
       </motion.div>

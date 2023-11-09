@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 export function ModalInfo() {
   return (
-    <div className="card card-default overflow-hidden bg-slate-100">
+    <div className={'card card-default overflow-hidden bg-slate-100'}>
+      {/*header of the card*/}
       <div className="card-body mx-3">
         <div className="mx-5 mt-4 flex drop-shadow-md">
           <div className=" card-title w-11/12 pl-10 text-center">

@@ -43,7 +43,7 @@ export function EsteticaPresentation(props) {
           transition={{ duration: 1.5 }}
           className="text-3xl font-bold text-white"
         >
-          Lo chibcha, lo maravilloso
+          Memorias Guane, ecos de la eternidad.
         </motion.h1>
       </AnimatePresence>
 

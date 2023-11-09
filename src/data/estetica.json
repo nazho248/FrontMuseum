@@ -15,14 +15,7 @@
     "img1": "img/3.jpg",
     "img2": "img/4.jpg"
   },
-  "2": {
-    "nombre": "C537",
-    "titulo": "C-537",
-    "tipo": "Múcura",
-    "analisis": "Se genera cuti, que en lengua INCA significa regreso, eso es espiral, también es el ciclo incesante de la vida y de la muerte, el hecho de que esté sobre el hombro de la pieza, es la huella que deja en este mundo que para nosotros es tangible, al igual que la semilla, nace crece se reproduce y muere. \n Cosmovisión es la forma de ver la vida, lo representa el ideograma, integrados con la tridimensionalidad de la pieza, no en la bidimensionalidad",
-    "img1": "img/5.jpg",
-    "img2": "img/6.jpg"
-  },
+
   "3": {
     "nombre": "C893",
     "titulo": "C-893",
@@ -86,30 +79,5 @@
     "analisis": "Globular, con asa plana ancha que va desde la parte media del hombro hasta la mitad del cuello, evidencia de decoración cromática roja, labio vertido externo, cuello cilíndrico abombado en la mitad.",
     "img1": "img/21.jpg",
     "img2": "img/22.jpg"
-  },
-  "11": {
-    "nombre": "C183",
-    "titulo": "C-183",
-    "tipo": "copa"
-  },
-  "12": {
-    "nombre": "C374",
-    "titulo": "C-374",
-    "tipo": "Bandeja"
-  },
-  "13": {
-    "nombre": "C943",
-    "titulo": "C-943",
-    "tipo": "Cántaro"
-  },
-  "14": {
-    "nombre": "C586",
-    "titulo": "C-586",
-    "tipo": "Jarra Miniatura"
-  },
-  "15": {
-    "nombre": "C789",
-    "titulo": "C-789",
-    "tipo": "Copa Miniatura"
   }
 }

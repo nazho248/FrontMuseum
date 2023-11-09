@@ -1,13 +1,14 @@
 import { AiFillHome } from 'react-icons/ai'
 import { Link, useParams } from 'react-router-dom'
 
-export function NavPanel(artefactos) {
+export function NavPanel(props) {
   const { id } = useParams()
   let url_path = ''
   if (id !== undefined) {
     url_path = '../'
   }
 
+  console.log(props.idActual)
   return (
     <div
       id="customScroll"
@@ -22,15 +23,18 @@ export function NavPanel(artefactos) {
       </Link>
       {/*elementos*/}
       {/*para cada artefacto imprimirlo*/}
-      {artefactos.artefactos.map((artefacto, index) =>
+      {props.artefactos.map((artefacto, index) =>
         id !== artefacto.id ? (
           <Link
             to={'/artefacto/' + artefacto.nombre}
             key={artefacto.nombre}
-            onClick={() => artefacto.id === artefacto.nombre && artefactos.setChange(true)}
+            onClick={() => artefacto.id === artefacto.nombre && props.setChange(true)}
           >
             <img
-              className={'h-fit w-fit rounded-md drop-shadow-xl'}
+              className={
+                'h-fit w-fit rounded-md drop-shadow-xl ' +
+                (artefacto.nombre === props.idActual && 'border-4 border-red-600')
+              }
               src={url_path + 'assets/img/artefactos/Thumbs/' + artefacto.nombre + '_tn.jpg'}
               alt=""
               style={{

@@ -53,32 +53,6 @@ export function TimeImages(props) {
         </div>
       </div>
 
-      {/*<div className="mt-10 flex  grow flex-col items-center justify-center gap-4 lg:gap-14">
-        <h1 className="text-xl text-white lg:text-5xl">{props.data.titulo}</h1>
-        <div
-          className={
-            'flex ' +
-            (props.ultimo ? 'w-10/12' : 'w-9/12') +
-            ' mx-auto  mb-28 items-center  justify-center space-x-10 lg:mb-0'
-          }
-        >
-          {props.data.imagenes.map((imagen, index) => (
-            <div className="flex grow justify-center" key={index}>
-              <div className=" max-w-xs rounded-lg border border-gray-200 bg-white/70 shadow lg:max-h-96 lg:max-w-2xl">
-                <img
-                  className=" grow rounded-t-lg object-cover"
-                  src={'../../assets/img/Timeline/' + imagen.imagen}
-                  alt=""
-                />
-                <div className="grow overflow-hidden p-2 pb-0 lg:p-5 lg:pb-5">
-                  <p className="mb-3 text-xs font-normal text-gray-700 lg:text-base">{imagen.descripcion}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>*/}
-
       {/*flecha derecha ->*/}
       <motion.div
         className="cursor-pointer text-white"

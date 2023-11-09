@@ -1,9 +1,8 @@
 import { Canvas } from '@react-three/fiber'
 import { HitXR } from './HitXR'
-import { ARButton, startSession, XR } from '@react-three/xr'
+import { startSession, XR } from '@react-three/xr'
 import { Fragment, useCallback, useEffect, useState } from 'react'
 import { TbAugmentedReality } from 'react-icons/tb'
-import { TbAugmentedRealityOff } from 'react-icons/tb'
 import InterfaceAR from './InterfaceAR'
 
 async function browserHasImmersiveArCompatibility() {
@@ -15,9 +14,8 @@ async function browserHasImmersiveArCompatibility() {
   return false
 }
 
-const CubeContainer = ({ model }) => {
+const CubeContainer = ({ model, webxr, setwebxr, init, setInit }) => {
   const [isSupported, setIsSupported] = useState(false)
-  const [init, setInit] = useState(false)
 
   useEffect(() => {
     browserHasImmersiveArCompatibility().then(res => {
@@ -40,25 +38,20 @@ const CubeContainer = ({ model }) => {
       optionalFeatures: ['hit-test', 'dom-overlay'],
       domOverlay: { root: overlayContent },
     })
+    //marcar webxr true o false segun suceda
+    setwebxr(true)
     setInit(true)
   }
 
   return (
     <Fragment>
       {/*es importante que este en un componente por aparte y siempre se esté renderizando para poderlo pasar en dom*/}
-      <InterfaceAR ref={buttonRef} init={init} setInit={setInit} />
+      <InterfaceAR ref={buttonRef} init={init} setInit={setInit} setwebxr={setwebxr} />
       <Canvas camera={{ position: [0, 1, 0], fov: 20 }} width={window.innerWidth} height={window.innerHeight}>
         <XR>
           <HitXR model={model} />
         </XR>
       </Canvas>
-      {/*<ARButton
-        sessionInit={{
-          requiredFeatures: ['hit-test'],
-          optionalFeatures: ['dom-overlay'],
-          domOverlay: { root: overlayContent },
-        }}
-      />*/}
       {isSupported && !session && (
         <button
           onClick={handleClick}

@@ -1,17 +1,27 @@
-import { Suspense, useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import CubeContainer from '../../AR/CubeContainer'
 import { ImSpinner9 } from 'react-icons/im'
 /*import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import SceneInit from '../../lib/SceneInit'
 import { useLoader } from 'react-three-fiber'*/
+
 export function ModelViewerUPT(artefacto) {
   //url del modelo en /pulic/assets/models
+  const [init, setInit] = useState(false)
 
   let modelUrl = 0
   if (artefacto.artefacto.model !== 0) {
     modelUrl = '/assets/models/' + artefacto.artefacto.model
   }
+
+  document.addEventListener('fullscreenchange', event => {
+    //si se cierra el fullscreen y webxr esta activo entonces se ha salido del webxr, desactivar la interfaz y setear webxr a false
+    if (!document.fullscreenElement && artefacto.webxr) {
+      setInit(false)
+      artefacto.setwebxr(false)
+    }
+  })
 
   return (
     <div
@@ -40,7 +50,13 @@ export function ModelViewerUPT(artefacto) {
               </div>
             }
           >
-            <CubeContainer model={modelUrl} />
+            <CubeContainer
+              model={modelUrl}
+              webxr={artefacto.webxr}
+              setwebxr={artefacto.setwebxr}
+              init={init}
+              setInit={setInit}
+            />
           </Suspense>
         )}
       </div>

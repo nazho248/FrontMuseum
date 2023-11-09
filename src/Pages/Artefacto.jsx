@@ -9,7 +9,7 @@ import { ArtefactPresentation } from '../components/artefacto/ArtefactPresentati
 import { NotFound } from './NotFound'
 import { ModelViewerUPT } from '../components/artefacto/ModelViewerUPT'
 
-export function Artefacto() {
+export function Artefacto({ webxr, setwebxr }) {
   document.title = 'Artefacto'
   document.body.id = 'Artefacto'
   document.body.className = 'h-screen max-h-screen'
@@ -19,7 +19,6 @@ export function Artefacto() {
   const artefacts_array = Object.values(artefactos)
   //el id es el nombre del artefacto de la URI
   const { id } = useParams()
-  console.log('id: ', id)
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [change, setChange] = useState(false)
@@ -58,7 +57,15 @@ export function Artefacto() {
         {/*si el id esta entre los elements de artefactos*/}
         {id !== undefined && (
           <Fragment>
-            {isLoaded && <ModelViewerUPT artefacto={artefacto} change={change} setChange={setChange} />}
+            {isLoaded && (
+              <ModelViewerUPT
+                artefacto={artefacto}
+                change={change}
+                setChange={setChange}
+                webxr={webxr}
+                setwebxr={setwebxr}
+              />
+            )}
             {isLoaded && <Content artefacto={artefacto} />}
           </Fragment>
         )}
@@ -70,7 +77,7 @@ export function Artefacto() {
         transition={{ duration: 0.5 }}
         key={id}
       >
-        <NavPanel artefactos={artefacts_array} change={change} setChange={setChange} />
+        <NavPanel artefactos={artefacts_array} idActual={id} change={change} setChange={setChange} />
       </motion.div>
     </div>
   )

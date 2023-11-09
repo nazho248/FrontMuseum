@@ -28,15 +28,15 @@ export const RemoveTrailingSlash = ({ ...rest }) => {
   } else return null
 }
 
-function AnimatedRoutes(props) {
+function AnimatedRoutes({ loadedImages, webxr, setwebxr, firstime, setfirstime, ...props }) {
   const location = useLocation()
   //const tiempoRegex = /^(text|img)$/
   return (
     <AnimatePresence>
       <RemoveTrailingSlash />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage loadedImages={props.loadedImages} />} />
-        <Route path="/index" element={<HomePage loadedImages={props.loadedImages} />} />
+        <Route path="/" element={<HomePage loadedImages={loadedImages} firstime={firstime} />} />
+        <Route path="/index" element={<HomePage loadedImages={loadedImages} firstime={firstime} />} />
 
         <Route path="/Estetica" element={<Estetica />} />
         <Route path="/Estetica/:id" element={<Estetica />} />
@@ -45,9 +45,9 @@ function AnimatedRoutes(props) {
         <Route path="/Tiempo/:year" element={<Tiempo key_bg={0} />} />
         <Route path="/Tiempo" element={<Tiempo key_bg={0} />} />
 
-        <Route path="/Artefacto/:id" element={<Artefacto />} />
-        <Route path="/Artefacto/:id" element={<Artefacto />} />
-        <Route path="/Artefacto/" element={<Artefacto />} />
+        <Route path="/Artefacto/:id" element={<Artefacto webxr={webxr} setwebxr={setwebxr} />} />
+        <Route path="/Artefacto/:id" element={<Artefacto webxr={webxr} setwebxr={setwebxr} />} />
+        <Route path="/Artefacto/" element={<Artefacto webxr={webxr} setwebxr={setwebxr} />} />
         <Route path="/Galeria" element={<Galeria />} />
         {/*ruta especial :3*/}
         <Route path="/AR" element={<ArgumentedReality />} />
