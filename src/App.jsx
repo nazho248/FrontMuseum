@@ -8,6 +8,7 @@ import { LoadingScreen } from './components/LoadingScreen'
 import { UseLoading } from './hooks/UseLoading'
 import { useOrientation } from './hooks/UseOrientation'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
+import { Analytics } from '@vercel/analytics/react'
 
 //import fragments
 
@@ -33,6 +34,7 @@ export const App = () => {
               {isLoaded && (
                 <AnimatedRoutes loadedImages={loadedImages} webxr={isWebXRActive} setwebxr={setIsWebXRActive} />
               )}
+              <Analytics />
             </OrientationChecker>
           </FullScreen>
         </div>

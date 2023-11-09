@@ -52,7 +52,6 @@ export function TimeImages(props) {
           ))}
         </div>
       </div>
-
       {/*flecha derecha ->*/}
       <motion.div
         className="cursor-pointer text-white"
