@@ -148,15 +148,17 @@ body#estetica, body#Tiempo{
 
 /*card aligned to the center*/
 .card.active {
-  top: 10%;
+  top: 15%;
   background-color: #e2e8f0 !important;
   color: black !important;
   z-index: 9999 !important;
 }
 
-.card.active .card-footer,
-.card.active hr {
-  display: block;
+.active .card-body #customScroll {
+  overflow-y: scroll !important;
+}
+#customScroll{
+  overflow: hidden;
 }
 
 .card-default {

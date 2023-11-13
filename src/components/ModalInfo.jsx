@@ -19,12 +19,8 @@ export function ModalInfo() {
           </div>
         </div>
         <br />
-        <div
-          id="customScroll"
-          className="top-/[70px] sticky overflow-hidden overflow-y-auto "
-          style={{ maxHeight: 'calc(90vh - 120px)' }}
-        >
-          <div className="card-text mx-10 text-justify text-sm lg:text-base">
+        <div id="customScroll" className="top-/[70px] sticky" style={{ maxHeight: 'calc(90vh - 120px)' }}>
+          <div className="card-text mx-10 text-justify text-sm lg:text-lg">
             <p className="card-text text-justify">
               El proyecto se titula Re-leyendo artefactos: Puesta en valor de piezas arqueológicas a través de una
               museografía participativa en la Universidad de Santander, es resultado de la primera convocatoria que la
@@ -40,7 +36,7 @@ export function ModalInfo() {
               que estudiantes de la Universidad de Santander:
             </p>
             {/*2 columnas de texto*/}
-            <div className="m-4 grid grid-cols-2 text-sm lg:text-base">
+            <div className="m-4 grid grid-cols-2 text-sm lg:text-lg">
               <div className="card-text  mr-5 text-justify">
                 <ul className="list-outside list-disc space-y-2">
                   <li>
@@ -68,7 +64,7 @@ export function ModalInfo() {
               </div>
             </div>
 
-            <p className="card-text text-justify text-sm lg:text-base">
+            <p className="card-text text-justify text-sm lg:text-lg">
               Un especial agradecimiento a los estudiantes del Programa de Antropología y Tecnología en Comunicación
               Gráfica al igual que a María Fernanda Reyes Rodríguez por sus contribuciones que ayudaron a enriquecer
               este proyecto.
@@ -82,12 +78,13 @@ export function ModalInfo() {
             {/*<a href="login.html">*/}
             <div className="flex w-full">
               <div className="w-1/2">
-                <Link to={'/login'}>
-                  <h3 className="text-info icon text-start text-sm lg:text-base">🌎 Intranet</h3>
-                </Link>
+                <h3 className="text-info icon text-start text-sm lg:text-base">
+                  Universidad de Santander - Jair Gonzalez <span className="font-bold">@2023</span>
+                </h3>
               </div>
               <div className="w-1/2">
                 <div className="icon accesibility text-right">
+                  {/*version del proyecto con la version de package.json*/}
                   <h2 className="ml-2 text-xs text-slate-400">v. 1.0</h2>
                 </div>
               </div>
