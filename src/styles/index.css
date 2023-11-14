@@ -188,6 +188,10 @@ body#estetica, body#Tiempo{
   display: none;
 }
 
+.active .card-footer, .active hr {
+  display: block;
+}
+
 /*Hamburguer menu*/
 #nav-icon {
   width: 60px;
