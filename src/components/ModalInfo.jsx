@@ -69,27 +69,28 @@ export function ModalInfo() {
               Gráfica al igual que a María Fernanda Reyes Rodríguez por sus contribuciones que ayudaron a enriquecer
               este proyecto.
             </p>
-          </div>
-          <br />
-          <hr className="border-1 border-slate-300" />
-          {/*footer of the card*/}
-          <div className="card-footer p-3 text-center">
-            {/*icon of a world*/}
-            {/*<a href="login.html">*/}
-            <div className="flex w-full">
-              <div className="w-1/2">
-                <h3 className="text-info icon text-start text-sm lg:text-base">
-                  Universidad de Santander - Jair Gonzalez <span className="font-bold">@2023</span>
-                </h3>
-              </div>
-              <div className="w-1/2">
-                <div className="icon accesibility text-right">
-                  {/*version del proyecto con la version de package.json*/}
-                  <h2 className="ml-2 text-xs text-slate-400">v. 1.0</h2>
+
+            <hr className="border-1 mt-6 border-slate-300" />
+            {/*footer of the card*/}
+            <div className="card-footer p-3 text-center">
+              {/*icon of a world*/}
+              {/*<a href="login.html">*/}
+              <div className="flex w-full">
+                <div className="w-1/2">
+                  <h3 className="text-info icon text-start text-sm lg:text-base">
+                    Universidad de Santander - Jair Gonzalez <span className="font-bold">@2023</span>
+                  </h3>
+                </div>
+                <div className="w-1/2">
+                  <div className="icon accesibility text-right">
+                    {/*version del proyecto con la version de package.json*/}
+                    <h2 className="ml-2 text-xs text-slate-400">v. 1.0</h2>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <br />
         </div>
       </div>
     </div>

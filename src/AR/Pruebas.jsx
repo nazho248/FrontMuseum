@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-import CubeContainer from './CubeContainer'
+import ModelConatiner from './ModelConatiner'
 
 function Pruebas() {
   //cargar un modelo el cual se posicionara en el mundo real con AR al hacer clic
-  return <CubeContainer />
+  return <ModelConatiner />
 }
 
 export default Pruebas

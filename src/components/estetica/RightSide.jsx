@@ -15,7 +15,7 @@ export function RightSide({ artefacto_desc, color }) {
         <div
           className="bg-pattern absolute left-0 top-0 h-full w-full bg-gradient-to-r from-white to-gray-600 bg-cover bg-center"
           style={{
-            backgroundImage: `url(../assets/patterns/pattern_${color}.jpg)`,
+            backgroundImage: `url(../assets/img/estetica/patterns/pattern_${color}.jpg)`,
             objectFit: 'cover',
           }}
         />

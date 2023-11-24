@@ -26,7 +26,7 @@ export function ArtefactPresentation() {
       {/* Texto comentado en la mitad derecha con fondo negro y blanco */}
       <div className="w-4/6 self-end rounded-md bg-black bg-opacity-60 p-5 text-center text-sm text-white lg:text-2xl">
         <p>
-          Encontrarás 17 piezas de la cultura Guane de la reserva UDES. Estas piezas han sido estudiadas desde el área
+          Encontrarás 16 piezas de la cultura Guane de la reserva UDES. Estas piezas han sido estudiadas desde el área
           de antropología. Podrás consultar el catalogo en el botón más abajo.
         </p>
       </div>

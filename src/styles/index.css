@@ -157,9 +157,9 @@ body#estetica, body#Tiempo{
 .active .card-body #customScroll {
   overflow-y: scroll !important;
 }
-#customScroll{
+/*#customScroll{
   overflow: hidden;
-}
+}*/
 
 .card-default {
   position: absolute;

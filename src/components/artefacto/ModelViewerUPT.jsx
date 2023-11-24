@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useRef, useState } from 'react'
-import CubeContainer from '../../AR/CubeContainer'
+import ModelConatiner from '../../AR/ModelConatiner'
 import { ImSpinner9 } from 'react-icons/im'
 /*import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -50,7 +50,7 @@ export function ModelViewerUPT(artefacto) {
               </div>
             }
           >
-            <CubeContainer
+            <ModelConatiner
               model={modelUrl}
               webxr={artefacto.webxr}
               setwebxr={artefacto.setwebxr}

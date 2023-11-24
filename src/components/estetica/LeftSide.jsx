@@ -6,7 +6,7 @@ export function LeftSide({ color }) {
       <div
         className={'bg-pattern h-4/6 bg-gradient-to-r from-white to-gray-600 bg-cover bg-center ' + color + '_left'}
         style={{
-          backgroundImage: `url(../assets/patterns/pattern_${color}.jpg)`,
+          backgroundImage: `url(../assets/img/estetica/patterns/pattern_${color}.jpg)`,
           objectFit: 'cover',
         }}
       ></div>
