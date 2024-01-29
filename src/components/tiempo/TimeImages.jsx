@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
+import Zoom from 'react-medium-image-zoom'
 
 export function TimeImages(props) {
   const navigate = useNavigate()
@@ -42,11 +43,17 @@ export function TimeImages(props) {
             /*recuadro*/
             <div className="rounded-lg border border-gray-200 bg-white/70 shadow lg:w-3/6 xl:w-2/6">
               {/*imagen en la parte superior cuadrada*/}
-              <img
-                className="flex max-h-52 w-full grow rounded-t-lg object-cover lg:max-h-none"
-                src={'../../assets/img/Timeline/' + imagen.imagen}
-                alt=""
-              />
+
+              <Zoom>
+                <img
+                  className="flex max-h-56 w-full grow rounded-t-lg object-cover lg:max-h-none"
+                  src={'../../assets/img/Timeline/' + imagen.imagen}
+                  alt={imagen.descripcion}
+                  height="100%"
+                  width="100%"
+                />
+              </Zoom>
+
               <p className="m-3 flex grow text-xs font-normal text-gray-950 lg:text-base">{imagen.descripcion}</p>
             </div>
           ))}

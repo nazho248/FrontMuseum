@@ -1,7 +1,7 @@
 {
   "0": {
     "nombre": "C283",
-    "titulo": "C-283",
+    "titulo": "C283",
     "tipo": "Cuenco",
     "analisis": "Posee modulación, con estructura de múltiple repetición, pues lo módulos se repiten con textura táctil generando un contraste de similitud por figura intercalada, con toque, se podría incluir espacio positivo y negativo, con líneas delimitantes en la parte superior e inferior del diseño. \n Representa la vida ya que al consumir agua, se consume vida.",
     "img1": "img/1.jpg",
@@ -9,13 +9,20 @@
   },
   "1": {
     "nombre": "C600",
-    "titulo": "C-600",
+    "titulo": "C600",
     "tipo": "Múcura",
     "analisis": "Diseños de color rojo, en su cuello se percibe rectángulo pintado de color rojo, enmarcado por otros 2 rectángulos, a manera de contorno, generando un contraste por espacio (ocupado vacío o positivo y negativo) de figura y tamaño, lo puede dar un inicio de fractal ejemplo cerca y lejos, También se podría apreciar el efecto espejo. \n Triangulo obtuso dentro de 2 triángulos obtusos, en que el triángulo interno genera un contraste por espacio, ocupado vacío que lo dan los 2 triángulos externos por el contorno, el segundo triangulo tiene sus 3 ángulos pintados como si lo señalara.",
     "img1": "img/3.jpg",
     "img2": "img/4.jpg"
   },
-
+  "2": {
+    "nombre": "C537",
+    "titulo": "C-537",
+    "tipo": "Múcura",
+    "analisis": "Se genera cuti, que en lengua INCA significa regreso, eso es espiral, también es el ciclo incesante de la vida y de la muerte, el hecho de que esté sobre el hombro de la pieza, es la huella que deja en este mundo que para nosotros es tangible, al igual que la semilla, nace crece se reproduce y muere. \n Cosmovisión es la forma de ver la vida, lo representa el ideograma, integrados con la tridimensionalidad de la pieza, no en la bidimensionalidad",
+    "img1": "img/5.jpg",
+    "img2": "img/6.jpg"
+  },
   "3": {
     "nombre": "C893",
     "titulo": "C-893",
@@ -79,5 +86,30 @@
     "analisis": "Globular, con asa plana ancha que va desde la parte media del hombro hasta la mitad del cuello, evidencia de decoración cromática roja, labio vertido externo, cuello cilíndrico abombado en la mitad.",
     "img1": "img/21.jpg",
     "img2": "img/22.jpg"
+  },
+  "11": {
+    "nombre": "C183",
+    "titulo": "C-183",
+    "tipo": "copa"
+  },
+  "12": {
+    "nombre": "C374",
+    "titulo": "C-374",
+    "tipo": "Bandeja"
+  },
+  "13": {
+    "nombre": "C943",
+    "titulo": "C-943",
+    "tipo": "Cántaro"
+  },
+  "14": {
+    "nombre": "C586",
+    "titulo": "C-586",
+    "tipo": "Jarra Miniatura"
+  },
+  "15": {
+    "nombre": "C789",
+    "titulo": "C-789",
+    "tipo": "Copa Miniatura"
   }
 }
