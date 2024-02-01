@@ -8,7 +8,6 @@ export function NavPanel(props) {
     url_path = '../'
   }
 
-  console.log(props.idActual)
   return (
     <div
       id="customScroll"

@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
 import { BackBtn } from '../BackBtn'
-import { ModelViewer } from '../components/artefacto/ModelViewer'
 import { Content } from '../components/artefacto/Content'
 import { NavPanel } from '../components/artefacto/NavPanel'
 import { motion } from 'framer-motion'

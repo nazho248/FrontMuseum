@@ -1,10 +1,11 @@
 import { Home } from '../components/index/Home'
 import { ModalInfo } from '../components/ModalInfo'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
-export function HomePage({ loadedImages }) {
-  const indexCards = Object.values(require('../data/Homepage.json'))
+export function HomePage({ loadedImages, firstime, setfirstime }) {
+  const data = Object.values(require('../data/Homepage.json'))
+  const indexCards = Object.values(data[0].secciones)
+  const paragraphs = Object.values(data[0].presentacion)
 
   document.title = 'Bienvenido'
   document.body.id = 'Home'
@@ -22,7 +23,13 @@ export function HomePage({ loadedImages }) {
         transition={{ duration: 0.5, delay: 0.8 }}
       >
         {/* Contenido principal */}
-        <Home bottomrows={indexCards} images={loadedImages} />
+        <Home
+          bottomrows={indexCards}
+          images={loadedImages}
+          paragraphs={paragraphs}
+          firstime={firstime}
+          setFirstime={setfirstime}
+        />
 
         <ModalInfo />
       </motion.div>

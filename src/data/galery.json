@@ -6,7 +6,7 @@
     "descripcion": "Guane observando hormigas  culonas y no en su proceso de recolección.",
     "alt": "lorem ipsum dorem"
   },
-  "2": {
+  "6": {
     "id": 1,
     "imgsrc": "piezas_guane_1_caldero.jpg",
     "audio": "audio.owo",
@@ -34,39 +34,11 @@
     "descripcion": "Capas concéntricas reorganizadas con las algunas figuras geométricas plasmadas en las piezas arqueológicas resaltando la posible la huella. (formato 1/2 pliego (50x70 cm)).",
     "alt": "lorem ipsum dorem"
   },
-  "6": {
+  "2": {
     "id": 5,
     "imgsrc": "Grethel_Flórez-Sierra-Radiación-Colombiana.jpeg",
     "audio": "audio.owo",
     "descripcion": "Abstracción desde el biomimetismo, la naturaleza como fuente de inspiración con la secuencia a Fibonacci (planta suculenta), se plantea de manera orgánica, radiación, rotación gradual, a partir de triángulos, colores complementarios, azul, naranja con el análogo amarillo adicionando colores terracota. (formato 1/2 pliego (50x70)).",
     "alt": "lorem ipsum dorem"
-  },
-  "7": {
-    "id": 6,
-    "imgsrc": "estantes_reserva.jpeg",
-    "audio": "audio.owo",
-    "descripcion": "Estanterías con ceramicas en la reserva UDES.",
-    "alt": "Estanterías con ceramicas en la reserva UDES."
-  },
-  "8": {
-    "id": 7,
-    "imgsrc": "reserva_edgar.jpeg",
-    "audio": "audio.owo",
-    "descripcion": "Guardían de la reserva Edgar Pico realizando una obra",
-    "alt": "Guardían de la reserva Edgar Pico realizando una obra"
-  },
-  "9": {
-    "id": 8,
-    "imgsrc": "visita_reserva.jpeg",
-    "audio": "audio.owo",
-    "descripcion": "Guardían de la reserva Edgar Pico realizando una visita guiada",
-    "alt": "Guardían de la reserva Edgar Pico realizando una visita guiada"
-  },
-  "10": {
-    "id": 9,
-    "imgsrc": "estantes_2_reserva.jpeg",
-    "audio": "audio.owo",
-    "descripcion": "Estanterías con ceramicas en la reserva UDES.",
-    "alt": "Estanterías con ceramicas en la reserva UDES."
   }
 }

@@ -17,6 +17,7 @@ export const App = () => {
   const { isLoaded, loading, loadedImages } = UseLoading()
   const forceRender = useOrientation()
   const handle = useFullScreenHandle()
+  const [firstTime, setFirstTime] = useState(true)
 
   const attemptEnterFullScreen = () => {
     if (!handle.active && !isWebXRActive) {
@@ -32,7 +33,13 @@ export const App = () => {
             <OrientationChecker key={forceRender}>
               {!isLoaded && <LoadingScreen percentage={loading} />}
               {isLoaded && (
-                <AnimatedRoutes loadedImages={loadedImages} webxr={isWebXRActive} setwebxr={setIsWebXRActive} />
+                <AnimatedRoutes
+                  loadedImages={loadedImages}
+                  webxr={isWebXRActive}
+                  setwebxr={setIsWebXRActive}
+                  firstime={firstTime}
+                  setfirstime={setFirstTime}
+                />
               )}
               <Analytics />
             </OrientationChecker>

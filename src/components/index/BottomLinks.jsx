@@ -35,7 +35,7 @@ export function BottomLinks({ bottomrows, images }) {
               />
             )}
             <div>
-              <h2 className="text-center  text-xs sm:text-sm lg:text-3xl" style={{ color: '#fc9f8e' }}>
+              <h2 className="text-center  text-xs sm:text-sm lg:text-2xl" style={{ color: '#fc9f8e' }}>
                 {bottomrow.title}
               </h2>
             </div>

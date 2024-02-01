@@ -35,8 +35,14 @@ function AnimatedRoutes({ loadedImages, webxr, setwebxr, firstime, setfirstime, 
     <AnimatePresence>
       <RemoveTrailingSlash />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage loadedImages={loadedImages} firstime={firstime} />} />
-        <Route path="/index" element={<HomePage loadedImages={loadedImages} firstime={firstime} />} />
+        <Route
+          path="/"
+          element={<HomePage loadedImages={loadedImages} firstime={firstime} setfirstime={setfirstime} />}
+        />
+        <Route
+          path="/index"
+          element={<HomePage loadedImages={loadedImages} firstime={firstime} setfirstime={setfirstime} />}
+        />
 
         <Route path="/Estetica" element={<Estetica />} />
         <Route path="/Estetica/:id" element={<Estetica />} />

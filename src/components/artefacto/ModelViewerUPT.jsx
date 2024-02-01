@@ -60,10 +60,7 @@ export function ModelViewerUPT(artefacto) {
           </Suspense>
         )}
       </div>
-      <p
-        className=" w-12/12 mx-5 mt-3 text-center text-sm font-light lg:mt-10 lg:text-2xl"
-        style={{ color: '#A62422' }}
-      >
+      <p className="mx-6 mt-3 w-10/12 text-center text-sm font-light lg:mt-10 lg:text-2xl" style={{ color: '#A62422' }}>
         {artefacto.artefacto.descripcion}
       </p>
     </div>

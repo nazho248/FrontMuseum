@@ -33,32 +33,35 @@ export function TimeImages(props) {
       {/*flecha izquierda <- */}
 
       {/*div central con el contenido*/}
+      <div className="flex grow flex-col justify-center">
+        {/*titulo en la parte superior*/}
+        <h1 className="mb-6 text-xl text-white lg:mb-10 lg:text-5xl">{props.data.titulo}</h1>
 
-      <div className="mt-10 grow flex-col justify-center">
-        <h1 className="mb-2 text-xl text-white lg:mb-10 lg:text-5xl">{props.data.titulo}</h1>
-
-        {/*imagenes*/}
-        <div className="flex grow items-center justify-center gap-4 lg:gap-14">
+        <div
+          className={`m-auto grid grid-cols-2 gap-4 lg:w-3/4 ${
+            props.data.imagenes.length === 1 ? 'translate-x-1/4' : ''
+          }`}
+        >
+          {/*imagenes*/}
           {props.data.imagenes.map((imagen, index) => (
             /*recuadro*/
-            <div className="rounded-lg border border-gray-200 bg-white/70 shadow lg:w-3/6 xl:w-2/6">
+            <div className=" rounded-lg border border-gray-200 bg-white/70 shadow">
               {/*imagen en la parte superior cuadrada*/}
 
               <Zoom>
                 <img
-                  className="flex max-h-56 w-full grow rounded-t-lg object-cover lg:max-h-none"
+                  className="flex aspect-square max-h-48 w-full grow rounded-t-lg object-cover lg:max-h-none"
                   src={'../../assets/img/Timeline/' + imagen.imagen}
                   alt={imagen.descripcion}
-                  height="100%"
-                  width="100%"
                 />
               </Zoom>
 
-              <p className="m-3 flex grow text-xs font-normal text-gray-950 lg:text-base">{imagen.descripcion}</p>
+              <p className="m-3 text-center text-xs text-gray-950 lg:text-base">{imagen.descripcion}</p>
             </div>
           ))}
         </div>
       </div>
+
       {/*flecha derecha ->*/}
       <motion.div
         className="cursor-pointer text-white"

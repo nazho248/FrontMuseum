@@ -11,7 +11,9 @@ export function UseLoading(factory, deps) {
   //imagenes del index importantes a precargar, esto para solo hacerlo una vez C;
   let imagenes_precarga = useMemo(() => {
     const indexCards = Object.values(require('../data/Homepage.json'))
-    let data = indexCards.map(item => {
+
+    let secciones = Object.values(indexCards[0].secciones)
+    let data = secciones.map(item => {
       return item.imageSrc
     })
 

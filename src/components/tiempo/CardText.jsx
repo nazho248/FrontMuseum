@@ -35,14 +35,13 @@ export function CardText(props) {
       >
         <BsArrowLeft className="text-4xl lg:text-6xl" />
       </motion.div>
-
       {/*contenido*/}
-      <div className="mx-auto flex max-h-[16rem] w-10/12 flex-col items-center overflow-scroll overflow-x-hidden rounded-lg bg-slate-50	 bg-opacity-70 p-6 text-lg lg:max-h-screen lg:w-9/12  lg:overflow-hidden lg:overflow-hidden">
+      <div className="mx-auto max-h-[16rem] items-center  overflow-scroll rounded-lg bg-slate-50 bg-opacity-70 p-6 text-lg lg:max-h-none lg:overflow-hidden lg:p-10">
         <h1 className="mb-2 w-full whitespace-pre-line text-sm font-bold lg:mb-10 lg:text-2xl">
           {props.data.textos[0].titulo}
         </h1>
         {/*imprimir los /n como saltos de linea*/}
-        <p className="whitespace-pre-line text-justify text-xs lg:text-xl">{texto}</p>
+        <p className="max-w-xl whitespace-pre-line text-justify text-xs lg:max-w-4xl lg:text-xl">{texto}</p>
       </div>
 
       {/*flecha derecha ->*/}

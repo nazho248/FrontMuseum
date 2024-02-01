@@ -3,6 +3,41 @@
 }*/
 
 /* Animación de entrada y salida para las páginas */
+@font-face {
+  font-family: Monserrat;
+  src: url('../../public/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('../../public/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: openSans;
+  src: url('../../public/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: lato;
+  src: url('../../public/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: NotoSans;
+  src: url('../../public/fonts/NotoSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoSlab;
+  src: url('../../public/fonts/RobotoSlab-Regular.ttf');
+}
+
+*{
+  font-family: Roboto, serif;
+}
+
+
 .page-enter {
   opacity: 0;
   transform: translateX(100%);
