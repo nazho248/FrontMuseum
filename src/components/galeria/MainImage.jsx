@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export function MainImage({ currentImage, setCurrentImage }) {
-  const [isTextHidden, setTextHidden] = useState(true)
+  const [isTextHidden, setTextHidden] = useState(false)
 
   const handleInfoCircleClick = () => {
     setTextHidden(prevTextHidden => !prevTextHidden)
