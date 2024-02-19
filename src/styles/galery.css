@@ -111,8 +111,8 @@
 .image-text {
   position: absolute;
   bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0%;
+  transform: translateX(-25%);
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   border-radius: 10px 10px 0 0;

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { TbAugmentedReality } from 'react-icons/tb'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { LiaFileDownloadSolid } from 'react-icons/lia'
+import { Link } from 'react-router-dom'
 
 export function ArtefactPresentation() {
   const estilo = {
@@ -17,14 +18,22 @@ export function ArtefactPresentation() {
         <p>Encontrarás 16 piezas arqueológicas que puedes descargar en el catálogo o navegar en la muestra virtual</p>
       </div>
 
-      <a
-        className="flex scale-75 transform gap-8 self-center p-5 text-white transition-all duration-500 hover:scale-110 hover:text-orange-400 lg:scale-100"
-        href="/Re-Leyendo Arte-Factos_2023.pdf"
-        target={'_blank'}
-      >
-        <FaMagnifyingGlass size="5rem" />
-        <LiaFileDownloadSolid size="5rem" />
-      </a>
+      <div className="flex  transform gap-8 self-center p-5 text-white ">
+        <a
+          target={'_blank'}
+          href="/Re-Leyendo Arte-Factos_2023.pdf"
+          className={'scale-75 transition-all duration-500 hover:scale-110 hover:text-orange-400 lg:scale-100'}
+        >
+          <LiaFileDownloadSolid size="5rem" />
+        </a>
+
+        <Link to={'/artefacto/C283'}>
+          <FaMagnifyingGlass
+            size="5rem"
+            className={'scale-75 transition-all duration-500 hover:scale-110 hover:text-orange-400 lg:scale-100'}
+          />
+        </Link>
+      </div>
 
       {/*texto en la parte inferior  como Nota*/}
       <div className="absolute bottom-0 left-2 lg:mb-1">
