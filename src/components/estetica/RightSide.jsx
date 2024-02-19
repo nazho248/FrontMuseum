@@ -4,11 +4,11 @@ export function RightSide({ artefacto_desc, color }) {
   return (
     <div className="flex h-screen w-9/12 flex-col">
       <div className={'lg:p-100 flex h-4/6 flex-col items-center ' + color + '_right'}>
-        <div className="mt-7 w-5/6 max-w-7xl lg:mt-32 lg:w-4/6">
+        <div className="w-5/6 max-w-7xl m-auto lg:w-4/6">
           <h1 className={'font-regular mb-2 w-full text-3xl font-bold lg:text-5xl ' + color + '_text_tittle'}>
             {artefacto_desc.tipo}
           </h1>
-          <h2 className={'font-regular w-full text-2xl font-bold lg:text-5xl ' + color + '_text_tittle'}>
+          <h2 className={'font-regular w-full text-xl font-bold lg:text-3xl ' + color + '_text_tittle'}>
             {artefacto_desc.titulo}
           </h2>
           <br />

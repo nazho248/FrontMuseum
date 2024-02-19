@@ -57,7 +57,7 @@ function Titulo() {
   return (
     <Fragment>
       <h1 className=" mb-2 text-center text-3xl lg:text-6xl" style={{ color: '#ffd869' }}>
-        Releyendo Artefactos
+        Re-leyendo Artefactos
       </h1>
       <p className=" text-center text-xl lg:mb-2 lg:text-3xl" style={{ color: '#fc9f8e' }}>
         Museo Arqueológico, Etnológico e Histórico
@@ -70,20 +70,22 @@ function Titulo() {
 }
 
 function Parrafo({ texto, page }) {
-  return (
+    console.log(texto)
+    return (
     <Fragment>
-      <p
-        className="mb-6 max-w-lg text-center text-sm md:text-base lg:max-w-4xl lg:text-2xl"
-        style={{ color: '#ffffff', lineHeight: '1.625em' }}
-      >
-        {texto}
-        {page === 1 && (
-          <span className="cursor-pointer text-center text-sm underline lg:text-xl" style={{ color: '#fc9f8e' }}>
+        <div
+            className="mb-6 max-w-lg text-center text-sm md:text-base lg:max-w-4xl lg:text-2xl whitespace-pre-line"
+            style={{color: '#ffffff', lineHeight: '1.625em'}}
+        >
+            <div  dangerouslySetInnerHTML={{__html: texto}}/>
+
+            {page === 1 && (
+                <span className="cursor-pointer text-center text-sm underline lg:text-xl" style={{color: '#fc9f8e'}}>
             {' '}
-            Leer más...
+                    Leer más...
           </span>
-        )}
-      </p>
+            )}
+        </div>
     </Fragment>
-  )
+    )
 }

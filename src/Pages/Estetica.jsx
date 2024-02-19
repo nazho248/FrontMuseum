@@ -63,7 +63,7 @@ export function Estetica() {
         initial={{ opacity: 0, scale: 0.2 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.5 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.2, delay: 0.2 }}
       >
         {/*imprimir la presentacion si es el home*/}
         {id === undefined && <EsteticaPresentation />}

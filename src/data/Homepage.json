@@ -17,7 +17,7 @@
       },
       "2": {
         "id": 3,
-        "title": "Arte-Facto",
+        "title": "Arte-facto",
         "link": "/Artefacto",
         "imageSrc": "/assets/img/separata_arqueologia.jpg",
         "alt": "imagen 2",
@@ -32,8 +32,8 @@
       }
     },
     "presentacion": {
-      "0": "Re-leyendo Arte-factos es un sitio que busca acercarte a la apreciación de la cultura prehispánica guane. Re-leyendo, porque plantea diferentes perspectivas disciplinares sobre el mismo objeto para nutrir múltiples interpretaciones; y Arte-Factos, porque asume las creaciones materiales como objetos 'hechos con arte' a través del conocimiento cultural y la destreza humana.",
-      "1": "Acá encontrarás cuatro lecturas, una desde la dimensión Estética que se basa en la tradición oral para divulgar las apreciaciones que habitantes locales hacen de los diseños prehispánicos guanes; otra sobre el Tiempo de la ocupación humana en el Cañón del Chicamocha, narrada a partir de fuentes etnohistóricas y antropológicas; los Arte-Factos descritos técnicamente desde el quehacer arqueológico; y finalmente, una Galeria de creaciones artísticas que recrean espacios de la vida cotidiana y destacan motivos iconográficos de la cultura guane."
+      "0": "<p> <i>Re-leyendo Arte-factos</i> es un sitio que busca acercarte a la apreciación de la cultura prehispánica guane. <i>Re-leyendo</i>, porque plantea diferentes perspectivas disciplinares sobre el mismo objeto para nutrir múltiples interpretaciones; y <i>Arte-factos</i>, porque asume las creaciones materiales como objetos 'hechos con arte' a través del conocimiento cultural y la destreza humana.</p>",
+      "1": "Acá encontrarás cuatro lecturas, una desde la dimensión <b>Estética</b> que se basa en la tradición oral para divulgar las apreciaciones que habitantes locales hacen de los diseños prehispánicos guanes; otra sobre el <b>Tiempo</b> de la ocupación humana en el Cañón del Chicamocha, narrada a partir de fuentes etnohistóricas y antropológicas; los <b>Arte-factos</b> descritos técnicamente desde el quehacer arqueológico; y finalmente, una <b>Galería</b> de creaciones artísticas que recrean espacios de la vida cotidiana y destacan motivos iconográficos de la cultura guane."
     }
   }
 
