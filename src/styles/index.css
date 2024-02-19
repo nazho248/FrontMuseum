@@ -37,6 +37,12 @@ body#estetica, body#Tiempo{
   background-color: rgba(0, 0, 0, 1);
 }
 
+
+.resaltos b{
+  color: #fc9f8e;
+}
+
+
 .contenty {
   position: relative;
   overflow: hidden;

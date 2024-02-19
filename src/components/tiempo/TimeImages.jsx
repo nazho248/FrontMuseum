@@ -45,7 +45,7 @@ export function TimeImages(props) {
           {/*imagenes*/}
           {props.data.imagenes.map((imagen, index) => (
             /*recuadro*/
-            <div className=" rounded-lg border border-gray-200 bg-white/70 shadow">
+            <div className=" rounded-lg border border-gray-200 bg-white/70 shadow" key={index}>
               {/*imagen en la parte superior cuadrada*/}
 
               <Zoom>

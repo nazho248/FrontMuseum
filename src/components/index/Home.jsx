@@ -57,7 +57,7 @@ function Titulo() {
   return (
     <Fragment>
       <h1 className=" mb-2 text-center text-3xl lg:text-6xl" style={{ color: '#ffd869' }}>
-        Re-leyendo Artefactos
+        Re-leyendo Arte-factos
       </h1>
       <p className=" text-center text-xl lg:mb-2 lg:text-3xl" style={{ color: '#fc9f8e' }}>
         Museo Arqueológico, Etnológico e Histórico
@@ -74,7 +74,7 @@ function Parrafo({ texto, page }) {
     return (
     <Fragment>
         <div
-            className="mb-6 max-w-lg text-center text-sm md:text-base lg:max-w-4xl lg:text-2xl whitespace-pre-line"
+            className="mb-6 max-w-lg text-center text-sm md:text-base lg:max-w-4xl lg:text-2xl whitespace-pre-line resaltos"
             style={{color: '#ffffff', lineHeight: '1.625em'}}
         >
             <div  dangerouslySetInnerHTML={{__html: texto}}/>
