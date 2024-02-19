@@ -56,8 +56,11 @@ export function MainImage({ currentImage, setCurrentImage }) {
           size={28}
         />
       </motion.div>
-      <div className={`image-text ${isTextHidden ? 'hidden-text' : ''}`}>
-        <p className="text-white">{currentImage.descripcion}</p>
+      <div className={`image-text text-white ${isTextHidden ? 'hidden-text' : ''}`}>
+        <p className="italic">{currentImage.titulo}</p>
+        <p className="text-white">{currentImage.Autor}</p>
+        <p className="text-white">{currentImage.Tecnica}</p>
+        <p className="text-white">{currentImage.Ano}</p>
       </div>
     </div>
   )

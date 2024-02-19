@@ -14,7 +14,7 @@ export function ArtefactPresentation() {
     <div className="relative flex max-h-screen w-11/12 flex-col gap-4 p-5 lg:p-10" style={estilo}>
       {/* Texto comentado en la mitad derecha con fondo negro y blanco */}
       <div className="w-4/6 self-center rounded-md bg-black bg-opacity-60 p-5 text-center text-sm text-white lg:text-2xl">
-        <p>Encontrarás 16 piezas arqueológicas que puedes descargar en el catalogo o navegar en la muestra virtual</p>
+        <p>Encontrarás 16 piezas arqueológicas que puedes descargar en el catálogo o navegar en la muestra virtual</p>
       </div>
 
       <a

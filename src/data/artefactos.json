@@ -4,7 +4,7 @@
     "model": "C283.glb",
     "descripcion": "Cuenco con decoración externa a modo de excisión, con borde invertido y labio redondeado, cuerpo semiesférico y base convexa.",
     "img1": "283_01.png",
-    "alt1": "Cuenco con decoración excisa.",
+    "alt1": "Cuenco con decoración excisa",
     "img2": "283_02.jpg",
     "alt2": "Ilustración de la decoración excisa de calado",
     "id": 0
@@ -22,7 +22,7 @@
   "1": {
     "nombre": "C217",
     "model": "C217.glb",
-    "descripcion": "Copa de borde invertido y labio redondeado con decoración pintada externa e interna, presenta engobe. Tiene diseños geométricos en ambas superficies a dos colores: Crema y ocre.",
+    "descripcion": "Copa de borde invertido y labio redondeado con decoración pintada externa e interna, presenta engobe. Tiene diseños geométricos en ambas superficies a dos colores: crema y ocre.",
     "img1": "217_01.png",
     "alt1": "Copa con engobe",
     "img2": "217_02.png",
@@ -44,15 +44,15 @@
     "model": 0,
     "descripcion": "Olla con labio reforzado con borde invertido, presenta dos asas y decoración a modo de esgrafiado sobre el hombro de la pieza, con cuerpo subglobular, base convexa y acabado pulido.",
     "img1": "374_01.png",
-    "alt1": "Imagen del arefacto C958",
+    "alt1": "Olla",
     "img2": "374_02.png",
-    "alt2": "Imagen del arefacto C958",
+    "alt2": "Ilustración de la olla",
     "id": 4
   },
   "5": {
     "nombre": "C422",
     "model": "C422.glb",
-    "descripcion": "Olla de labio plano y borde reforzado evertido, con dos asas. Presenta huellas negras de uso producidas posiblemente por el fogon durante su vida útil.",
+    "descripcion": "Olla de labio plano y borde reforzado evertido con dos asas. Presenta huellas negras de uso producidas posiblemente por el fogón durante su vida útil.",
     "img1": "422_01.png",
     "alt1": "Olla con decoración incisa",
     "img2": "422_02.png",
@@ -62,11 +62,11 @@
   "18": {
     "nombre": "C517",
     "model": 0,
-    "descripcion": "Múcura con borde externo reforzado y labio redondeado, cuello y hombro rectos, cuerpo semiglobular y base convexa.",
+    "descripcion": "Jarra con borde externo reforzado y labio redondeado, cuello y hombro rectos, cuerpo semiglobular y base convexa.",
     "img1": "517_01.png",
-    "alt1": "Múcura con decoración externa.",
+    "alt1": "Jarra con decoración externa",
     "img2": "517_02.png",
-    "alt2": "Detalle del cuello.",
+    "alt2": "Detalle del cuello",
     "id": 6
   },
   "7": {
@@ -94,9 +94,9 @@
     "model": "C600.glb",
     "descripcion": "Jarra con borde reforzado externo y labio plano, cuello recto con una asa de argolla, hombro recto, cuerpo semiesférico y base plana. Tiene acabado pulido, engobe y decoración roja profusa con diseños geométricos.",
     "img1": "600_01.png",
-    "alt1": "Jarra con decoración pintada.",
+    "alt1": "Jarra con decoración pintada",
     "img2": "600_02.jpg",
-    "alt2": "Jarra con decoración pintada.",
+    "alt2": "Jarra con decoración pintada",
     "id": 9
   },
   "16": {
@@ -112,7 +112,7 @@
   "12": {
     "nombre": "C893",
     "model": "C893.glb",
-    "descripcion": "Olla con borde invertido y labio redondeado, hombro curvo desde donde salen dos asas, cuerpo esférico y base convexa. Sobre el hombro presenta decoración incisa con pintura blanca que conforma diseños geométricos. El acabado de la superficie es pulido",
+    "descripcion": "Olla con borde invertido y labio redondeado, hombro curvo desde donde salen dos asas, cuerpo esférico y base convexa. Sobre el hombro presenta decoración incisa con pintura blanca que conforma diseños geométricos.",
     "img1": "893_01.png",
     "alt1": "Detalle de la decoración del hombro de la olla",
     "img2": "893_02.png",
@@ -132,7 +132,7 @@
   "14": {
     "nombre": "C943",
     "model": "C943.glb",
-    "descripcion": "Olla de boca circular, borde reforzado externo, labio y cuello recto. Hombro curvo y cuerpo elipsoide con base plana. No tiene decoración aunque la superficie.",
+    "descripcion": "Olla de boca circular, borde reforzado externo, labio y cuello recto. Hombro curvo y cuerpo elipsoide con base plana.",
     "img1": "943_01.png",
     "alt1": "Olla",
     "img2": "943_02.jpg",

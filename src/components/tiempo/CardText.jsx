@@ -36,7 +36,10 @@ export function CardText(props) {
         <BsArrowLeft className="text-4xl lg:text-6xl" />
       </motion.div>
       {/*contenido*/}
-      <div id="customScroll" className="mx-auto max-h-[16rem] items-center  overflow-scroll rounded-lg bg-slate-50 bg-opacity-70 p-6 text-lg lg:max-h-none 2xl:max-h-[48rem] overflow-x-hidden 2xl:overflow-y-scroll lg:overflow-hidden lg:p-10">
+      <div
+        id="customScroll"
+        className="mx-auto max-h-[16rem] items-center  overflow-scroll overflow-x-hidden rounded-lg bg-slate-50 bg-opacity-70 p-6 text-lg lg:max-h-none lg:overflow-hidden lg:p-10 xl:max-h-[36rem] xl:overflow-y-scroll"
+      >
         <h1 className="mb-2 w-full whitespace-pre-line text-sm font-bold lg:mb-10 lg:text-2xl">
           {props.data.textos[0].titulo}
         </h1>
