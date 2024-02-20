@@ -93,7 +93,7 @@ export function ImagenT({ imagen }) {
 
       <div className="relative">
         <span
-          className="absolute -top-8 right-0 rounded-md bg-blue-500 p-2 text-white"
+          className="absolute -top-8 right-0 rounded-md bg-slate-500 p-2 text-white"
           onClick={() => setReferencia(!referencia)}
         >
           <FaInfoCircle />
