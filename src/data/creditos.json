@@ -1,0 +1,53 @@
+{
+  "0": {
+    "Nombre": "Margarita María Durán Urrea",
+    "Titulo": "Coordinadora de la línea de Tiempo",
+    "Descripcion": "Antropóloga y magíster en Antropología de la Universidad Nacional de Colombia.",
+    "Profesion": "Docente investigadora del programa de Antropología, Universidad de Santander.",
+    "correo": "",
+    "img": "margarita.webp"
+  },
+  "1": {
+    "Nombre": "Grethel Alexandra M. Flórez Sierra",
+    "Titulo": "Coordinadora de las líneas de Estética y Galería",
+    "Descripcion": "Tecnóloga en arte y decoración: Diseñadora Industrial.",
+    "Profesion": "Docente investigadora del programa de Tecnología en Comunicación Gráfica, Universidad de Santander.",
+    "correo": "GRE.FLOREZ@mail.udes.edu.co",
+    "img": "grethel.webp"
+  },
+  "2": {
+    "Nombre": "Mónica J. Giedelmann Reyes",
+    "Titulo": "Coordinadora de la línea de Arte-factos, curadora general y editora",
+    "Descripcion": "Antropóloga de la Universidad de Los Andes, magíster en Muerte y Sociedad y doctora en Arqueología de la Universidad de Reading (Reino Unido).",
+    "Profesion": "Docente investigadora del Programa de Antropología, Universidad de Santander.",
+    "correo":"mon.giedelmann@mail.udes.edu.co",
+    "img": "monica.webp"
+
+  },
+  "3": {
+    "Nombre": "Jair Andrés González Ruíz",
+    "Titulo": "Colaborador proyecto: Diseño web.",
+    "Descripcion": "Egresado del Programa de Ingeniería de Software, Universidad de Santander.",
+    "Profesion": "Ingeniero de Software.",
+    "img": "jair.webp"
+
+  },
+  "4": {
+    "Nombre": "Edgar Pico Ruíz",
+    "Titulo": "Colaborador en la línea de Estética\n",
+    "Descripcion": "Maestro plástico.",
+    "Profesion": "Museo Arqueológico, Etnológico e Histórico UDES,\nUniversidad de Santander.",
+    "img": "edgar.webp"
+  },
+"5": {
+  "Nombre": "Johana Rojas Sierra\n",
+  "Titulo": "Colaboradora en la línea de Galería\n",
+  "Descripcion": "Licenciada en Español y Literatura, y Tecnóloga en Diseño Gráfico Publicitario.",
+  "Profesion": "Docente investigadora del Programa Tecnología en Comunicación Gráfica,\nUniversidad de Santander.\n",
+  "img": "johana.webp"
+
+}
+
+
+
+}
