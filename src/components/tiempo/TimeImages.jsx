@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import Zoom from 'react-medium-image-zoom'
+import { FaInfoCircle } from 'react-icons/fa'
+import React, { Fragment, useState } from 'react'
 
 export function TimeImages(props) {
   const navigate = useNavigate()
@@ -45,19 +47,7 @@ export function TimeImages(props) {
           {/*imagenes*/}
           {props.data.imagenes.map((imagen, index) => (
             /*recuadro*/
-            <div className=" rounded-lg border border-gray-200 bg-white/70 shadow" key={index}>
-              {/*imagen en la parte superior cuadrada*/}
-
-              <Zoom>
-                <img
-                  className="flex aspect-square max-h-48 w-full grow rounded-t-lg object-cover lg:max-h-none"
-                  src={'../../assets/img/Timeline/' + imagen.imagen}
-                  alt={imagen.descripcion}
-                />
-              </Zoom>
-
-              <p className="m-3 text-center text-xs text-gray-950 lg:text-base">{imagen.descripcion}</p>
-            </div>
+            <ImagenT key={index} imagen={imagen} />
           ))}
         </div>
       </div>
@@ -80,6 +70,53 @@ export function TimeImages(props) {
         <BsArrowRight className=" text-4xl lg:text-6xl" />
       </motion.div>
       {/*flecha derecha ->*/}
+    </div>
+  )
+}
+
+export function ImagenT({ imagen }) {
+  const [referencia, setReferencia] = useState(false)
+
+  return (
+    <div className=" transform rounded-lg border border-gray-200 bg-white/70 shadow transition-all duration-500">
+      {/*imagen en la parte superior cuadrada*/}
+
+      <Zoom>
+        <img
+          className="flex aspect-square max-h-48 w-full grow rounded-t-lg object-cover lg:max-h-none"
+          src={'../../assets/img/Timeline/' + imagen.imagen}
+          alt={imagen.descripcion}
+        />
+      </Zoom>
+
+      <p className="m-3 text-center text-xs text-gray-950 lg:text-base">{imagen.descripcion}</p>
+
+      <div className="relative">
+        <span
+          className="absolute -top-8 right-0 rounded-md bg-blue-500 p-2 text-white"
+          onClick={() => setReferencia(!referencia)}
+        >
+          <FaInfoCircle />
+        </span>
+      </div>
+
+      {referencia && (
+        <motion.div
+          initial={{ scale: 0.3, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{
+            scale: 0.2,
+            opacity: 0,
+            transition: { duration: 0.5 },
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <hr />
+          <span className={'flex self-end text-slate-900'}>
+            <div className={'enlace_referencia mx-4 p-2'} dangerouslySetInnerHTML={{ __html: imagen.fuente }} />
+          </span>
+        </motion.div>
+      )}
     </div>
   )
 }

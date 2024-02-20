@@ -9,3 +9,8 @@
   overflow: hidden;
   background-size: cover;
 }
+
+.enlace_referencia a{
+  color: #8e0704;
+  text-decoration: underline;
+}

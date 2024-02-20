@@ -37,7 +37,7 @@ export function ModelViewerUPT(artefacto) {
       <div id="Model1" className="h-3/5 w-10/12 rounded-lg bg-white lg:h-4/6 ">
         {modelUrl === 0 ? (
           <img
-            className={'rounded-lg'}
+            className={'h-full rounded-lg object-cover object-left'}
             src={'/assets/img/artefactos/Frontal/' + artefacto.artefacto.nombre + '.jpg'}
             alt={artefacto.artefacto.nombre}
           />

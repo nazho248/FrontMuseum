@@ -19,11 +19,13 @@
     "imagenes": [
       {
         "imagen": "expedicion_los_santos.jpg",
-        "descripcion": "Expedición realizada en 1939 por el arqueólogo Justus Wolfram Schottelius en el municipio de Mesa de Los Santos, Santander."
+        "descripcion": "Expedición realizada en 1939 por el arqueólogo Justus Wolfram Schottelius en el municipio de Mesa de Los Santos, Santander.",
+        "fuente": "<p>Tomado de: Canal oficial de Twitter del ICANH. <a href='https://twitter.com/El_Icanh/status/1400595653638639622/photo/1'>Enlace</a></p>"
       },
       {
         "imagen": "arepa_tamal.jpg",
-        "descripcion": "Arepa y tamal santandereano"
+        "descripcion": "Arepa y tamal santandereano",
+        "fuente": "<p>Tomado de: Wikimedia Commons. <a href='https://commons.wikimedia.org/wiki/File:Arepa_y_Tamal_Santandereano.jpg'>Wiimedia Foundation</p>"
       }
     ]
   },
@@ -42,7 +44,8 @@
     "imagenes": [
       {
         "imagen": "africano_mestizo.jpg",
-        "descripcion": "Tipo africano y mestizo. Provincia de Santander."
+        "descripcion": "Tipo africano y mestizo. Provincia de Santander.",
+        "fuente": "<p>Tomado de: Colombia. Comisión Corográfica Sponsor, and Carmelo Fernández. African and Mestizo Inhabitants, Province of Santander. Norte De Santander Colombia, 1850. Fotografía: <a href='https://www.loc.gov/item/2021670125/'>enlace</a>.</p>"
       }
     ]
   },
@@ -66,7 +69,8 @@
     "imagenes": [
       {
         "imagen": "grupos_conquista.jpg",
-        "descripcion": "Grupos indígenas en la época de la Conquista"
+        "descripcion": "Grupos indígenas en la época de la Conquista",
+        "fuente": "<p>Tomado de: Morales y Cadavid. 1984. Investigaciones Etnohistóricas y Arqueológicas en el Área Guane. Fundación de Investigaciones Arqueológicas Nacionales, Banco de la República, Bogotá. (Morales & Cadavid, 1984)</p>"
       }
     ]
   },
@@ -85,11 +89,14 @@
     "imagenes": [
       {
         "imagen": "distancias_asentamientos.png",
-        "descripcion": "Distancias entre asentamientos indígenas y poblados actuales\n\n"
+        "descripcion": "Distancias entre asentamientos indígenas y poblados actuales\n\n",
+        "fuente": "<p>Tomado de: Mapa 3. Distancias entre asentamientos. Tomado de: Barrios, Camilo (2017). Los Guanes: ¿Una comunidad periférica? Trabajo de grado para optar al título de Antropólogo, Facultad de Ciencias Humanas, Universidad Nacional de Colombia, Bogotá D.C.</p>"
       },
       {
         "imagen": "tejido_guane.jpg",
-        "descripcion": "Tejido guane encontrado en La Mesa de Los Santos, en Santander\n\n"
+        "descripcion": "Tejido guane encontrado en La Mesa de Los Santos, en Santander\n\n",
+        "fuente": "<p>Tomado de <a href='https://commons.wikimedia.org/wiki/File:Tejido_guane_encontrado_en_la_Mesa_de_los_Santos,_Santander.jpg'>WikiMedia Foundation</a></p>"
+
       }
     ]
   },
@@ -114,7 +121,8 @@
     "imagenes": [
       {
         "imagen": "mapa_migraciones.png",
-        "descripcion": "Migraciones humanas en haplogrupos mitocondriales.\n\n"
+        "descripcion": "Migraciones humanas en haplogrupos mitocondriales.\n\n",
+        "fuente": "<p>Tomado de<a href='https://commons.wikimedia.org/wiki/File:Migraciones_humanas_en_haplogrupos_mitocondriales.PNG'> WikiMedia Foundation</a></p>"
       }
     ]
   }

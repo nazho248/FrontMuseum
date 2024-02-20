@@ -20,7 +20,7 @@ export function ModalInfo() {
           </div>
         </div>
         <br />
-        <div id="customScroll" className="top-/[70px] sticky" style={{ maxHeight: 'calc(90vh - 120px)' }}>
+        <div id="customScroll" className="top-/[60px] sticky" style={{ maxHeight: 'calc(90vh - 150px)' }}>
           <div className="card-text mx-4 text-justify text-sm lg:mx-10 lg:text-lg">
             {/*2 columnas de texto*/}
             <div className="grid grid-cols-1 grid-rows-1 gap-8 text-xs lg:grid-cols-1 lg:text-sm">
@@ -29,7 +29,7 @@ export function ModalInfo() {
               {datos_creditos.map((credito, index) => (
                 <div className="mx-8 flex justify-center gap-4">
                   <img
-                    className="aspect-square  w-24  object-contain lg:h-auto lg:w-1/4"
+                    className="aspect-square  max-h-52  w-24 object-contain lg:h-auto lg:w-1/4"
                     src={'/assets/creditos/' + credito.img}
                   />
                   <div className="flex max-w-sm flex-col self-center">
@@ -43,20 +43,25 @@ export function ModalInfo() {
                 </div>
               ))}
             </div>
-
-            <hr className="border-1 border-slate-300 py-6" />
+            <hr className="border-1 my-5 border-slate-300" />
             <p className="text-xs lg:text-sm">
               Un especial agradecimiento a los estudiantes de los programas de Antropología y Tecnología en Comunicación
               Gráfica que contribuyeron a este proyecto. Especialmente a Christian Mauricio Orozco Pérez y David
               Verdooren Flórez (Antropología) y, Valentina Guevara Rincón y Francisco Julián Romero Villamizar
               (Comunicación Gráfica).
             </p>
-
-            <hr className="border-1 border-slate-300 pt-6" />
+            <p className=" mt-4 text-xs lg:text-sm">
+              Este website es producto derivado del proyecto titulado:{' '}
+              <i>
+                Re-leyendo artefactos: Puesta en valor de piezas arqueológicas a través de una museografía participativa
+                en la Universidad de Santander
+              </i>
+              , elegido en la convocatoria de Creación Investigación financiada por la Vicerrectoría de Investigaciones
+              de la Universidad de Santander.
+            </p>
+            <hr className="border-1 mt-5 border-slate-300" />
             {/*footer of the card*/}
-            <div className="card-footer p-3 text-center">
-              {/*icon of a world*/}
-              {/*<a href="login.html">*/}
+            <div className="card-footer p-2 text-center">
               <div className="flex w-full">
                 <div className="w-1/2">
                   <h3 className="text-info icon text-start text-sm lg:text-base">
