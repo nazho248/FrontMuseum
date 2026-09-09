@@ -2,6 +2,9 @@
   "name": "museudes",
   "version": "1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@react-three/drei": "^9.88.6",
     "@react-three/fiber": "^8.15.10",
