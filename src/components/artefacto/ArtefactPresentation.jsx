@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion' // no usado, eslint lo marca como error en build (CI)
 import { TbAugmentedReality } from 'react-icons/tb'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { LiaFileDownloadSolid } from 'react-icons/lia'

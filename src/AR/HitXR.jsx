@@ -1,7 +1,7 @@
 import { OrbitControls } from '@react-three/drei'
 import { Fragment, useRef, useState } from 'react'
 import { Interactive, useHitTest, useXR } from '@react-three/xr'
-import Cube from './Cube'
+// import Cube from './Cube' // no usado, eslint lo marca como error en build (CI)
 import { useThree } from 'react-three-fiber'
 import { Model } from './Model'
 

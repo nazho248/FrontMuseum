@@ -31,6 +31,7 @@ export function ModalInfo() {
                   <img
                     className="aspect-square  max-h-52  w-24 object-contain lg:h-auto lg:w-1/4"
                     src={'/assets/creditos/' + credito.img}
+                    alt={credito.Nombre || ''}
                   />
                   <div className="flex max-w-sm flex-col self-center">
                     <b className="text-base lg:text-lg">{credito.Nombre}</b>

@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useRef, useState } from 'react'
+import { Suspense, useState } from 'react' // useEffect, useRef no usados, eslint los marca como error en build (CI)
 import ModelConatiner from '../../AR/ModelConatiner'
 import { ImSpinner9 } from 'react-icons/im'
 /*import * as THREE from 'three'

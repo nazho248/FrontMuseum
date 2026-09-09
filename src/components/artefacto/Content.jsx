@@ -4,6 +4,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 import { useState } from 'react'
 
 export function Content(artefacto) {
+  // eslint-disable-next-line no-unused-vars
   const [image1loaded, setImage1Loaded] = useState(false)
 
   let src1 = '../assets/img/artefactos/' + artefacto.artefacto.img1

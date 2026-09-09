@@ -1,5 +1,5 @@
 import { BackBtn } from '../BackBtn'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion' // AnimatePresence no usado, eslint lo marca como error en build (CI)
 import { useSwipeable } from 'react-swipeable'
 import { useNavigate } from 'react-router-dom'
 /*componentes*/

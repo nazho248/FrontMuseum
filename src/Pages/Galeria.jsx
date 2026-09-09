@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react' // useEffect no usado, eslint lo marca como error en build (CI)
 import { BackBtn } from '../BackBtn'
 import { MainImage } from '../components/galeria/MainImage'
 import { RightNav } from '../components/galeria/RightNav'

@@ -4,6 +4,7 @@ import { useAnimationControls } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
 export function EsteticaPresentation(props) {
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate()
   const controls = useAnimationControls()
 
@@ -17,21 +18,23 @@ export function EsteticaPresentation(props) {
     })
   }, [controls])
 
-  function handleClick() {
-    setTextState(textState + 1)
-    controls.start({
-      y: 50,
-      opacity: 0,
-      transition: {
-        duration: 1.5,
-      },
-    })
-    //esperar los 2 segundos de la animacion de salida
-    setTimeout(() => {
-      navigate(`/Estetica/C283`)
-    }, 2000)
-  }
+  // handleClick sin usar actualmente (no queda enlazado a ningun botón), comentado para que no rompa el build en CI (no-unused-vars)
+  // function handleClick() {
+  //   setTextState(textState + 1)
+  //   controls.start({
+  //     y: 50,
+  //     opacity: 0,
+  //     transition: {
+  //       duration: 1.5,
+  //     },
+  //   })
+  //   //esperar los 2 segundos de la animacion de salida
+  //   setTimeout(() => {
+  //     navigate(`/Estetica/C283`)
+  //   }, 2000)
+  // }
 
+  // eslint-disable-next-line no-unused-vars
   const [textState, setTextState] = useState(1)
   return (
     <div className="bg bg flex max-h-screen w-full flex-col justify-center bg-slate-900 p-10 text-center">

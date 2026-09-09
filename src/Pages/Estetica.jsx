@@ -28,6 +28,7 @@ export function Estetica() {
   //cambiar el color cada que se cambia de id (link)
   useEffect(() => {
     setColor(colores[Math.floor(Math.random() * colores.length)])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
   console.log(id)
 

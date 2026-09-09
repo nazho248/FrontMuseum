@@ -14,6 +14,7 @@ export function Home({ bottomrows, images, paragraphs, firstime, setFirstime }) 
         setFirstime(false)
       }, 3000)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firstime])
 
   const sumarReinicio = () => {

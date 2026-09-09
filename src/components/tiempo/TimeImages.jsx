@@ -3,7 +3,7 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import Zoom from 'react-medium-image-zoom'
 import { FaInfoCircle } from 'react-icons/fa'
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react' // Fragment no usado, eslint lo marca como error en build (CI)
 
 export function TimeImages(props) {
   const navigate = useNavigate()

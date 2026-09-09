@@ -1,5 +1,5 @@
-import { forwardRef, useRef, useState } from 'react'
-import { TbAugmentedRealityOff, TbHelpOctagon, TbHelpOff } from 'react-icons/tb'
+import { forwardRef, useRef } from 'react' // useState no usado, eslint lo marca como error en build (CI)
+import { TbAugmentedRealityOff, TbHelpOctagon } from 'react-icons/tb' // TbHelpOff no usado
 import { stopSession } from '@react-three/xr'
 import { motion, useAnimationControls } from 'framer-motion'
 
@@ -51,7 +51,14 @@ const InterfaceAR = forwardRef(({ init, setInit, setwebxr }, ref) => {
         animate={hideCoachControl}
       >
         <div className="flex flex-col items-center">
-          <object data="/assets/img/Coach_AR.svg" style={{ zIndex: 99999 }} className="h-1/2 w-1/2" />
+          <object
+            data="/assets/img/Coach_AR.svg"
+            style={{ zIndex: 99999 }}
+            className="h-1/2 w-1/2"
+            aria-label="Guía de escaneo de superficie para realidad aumentada"
+          >
+            Guía de escaneo de superficie para realidad aumentada
+          </object>
           <p className="text-md text-center text-white lg:text-2xl">
             Mueve el dispositivo sobre una superficie plana a distintos ángulos, escaneando sus bordes para delimitar el
             suelo digital. Una vez aparezca el circulo, pulsalo para invocar el modelo.
